@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OmniTrace — Dao Nguyen Dang Gia</title>
-  <meta name="description" content="OmniTrace is the telemetry layer for a multi-agent causal debugger: nested spans, checkpoints, and ClickHouse.">
+  <meta name="description" content="OmniTrace is a debugger for one failed agent run: load an OTLP JSON trace, isolate the failing span, fork a cleaned thread. Live demo on Render.">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,8 +37,12 @@
           <p class="kicker">01 · Agent systems</p>
           <h1>OmniTrace</h1>
           <p class="lede">
-            A debugger for multi-agent systems needs the reasoning thread, the checkpoint, and the super-step. Knowing that a request was slow is not enough.
+            Drop in the trace of a run that just failed. OmniTrace finds the smallest piece that still fails, then opens a new thread with that piece removed.
           </p>
+          <div class="hero-actions">
+            <a class="button" href="https://omnitrace.onrender.com/" rel="noopener">Open live demo</a>
+            <a class="quiet" href="https://github.com/daonguyenhp/OmniTrace" rel="noopener">GitHub</a>
+          </div>
           <table class="facts">
             <tr>
               <th>Field</th>
@@ -46,19 +50,23 @@
             </tr>
             <tr>
               <th>Role</th>
-              <td>Writing the telemetry layer</td>
+              <td>Designed and wrote the debugger, CLI, web workbench, and deploy config</td>
             </tr>
             <tr>
               <th>When</th>
-              <td>In progress · version 0.1</td>
+              <td>In progress · live demo on Render</td>
             </tr>
             <tr>
               <th>Stack</th>
-              <td>Python 3.11+, pytest, ClickHouse, OpenTelemetry GenAI conventions</td>
+              <td>Python 3.11+, OpenTelemetry GenAI JSON, ddmin / mRTF, Docker, Render</td>
+            </tr>
+            <tr>
+              <th>Demo</th>
+              <td><a href="https://omnitrace.onrender.com/" rel="noopener">omnitrace.onrender.com</a></td>
             </tr>
             <tr>
               <th>Code</th>
-              <td>Not on GitHub yet. Layer 1 has spans, semantics, and a ClickHouse sink. No interface yet.</td>
+              <td><a href="https://github.com/daonguyenhp/OmniTrace" rel="noopener">github.com/daonguyenhp/OmniTrace</a></td>
             </tr>
           </table>
         </div>
@@ -67,42 +75,39 @@
         <section>
           <h2>Context</h2>
           <p>
-            Celesnity shows that one loop can record events and isolate tools. OmniTrace asks the next question: when several agents interleave, how do you separate a meaningful step from network noise, then store it so you can later ask which checkpoint held a decision.
+            In a multi-step agent trace, the span that shows the failure is often not where the bad context entered. Knowing that a request was slow is not enough. You need a timeline of steps, a way to shrink the failing context, and a way to resume without that piece.
           </p>
         </section>
         <section>
           <h2>Approach</h2>
           <p>
-            The tracer keeps the current span in a context variable, so a child span inherits the parent trace and parent id. Each span is one of: chat, text completion, invoke agent, create agent, or execute tool.
+            Input is one failed run as OpenTelemetry GenAI JSON (<code>resourceSpans</code>). Steps are spans named <code>chat</code> or <code>execute_tool</code>. A symptom is usually <code>STATUS_CODE_ERROR</code>. An oracle on the resource can define “still failing” (<code>contains</code> or <code>tool_repeat</code>); if it is missing, the exception message or a tool-repeat heuristic is used.
           </p>
           <p>
-            Three OmniTrace fields travel with the span and are inherited unless overridden: thread id, checkpoint id, and super-step. A semantic flag marks events that belong to the reasoning trace, apart from network I/O. Prompts and completions are stored only when RECORD_PROMPT is on.
-          </p>
-          <p>
-            ClickHouse stores a MergeTree table ordered by trace id and start time. The three spatiotemporal fields become columns. Remaining attributes and events stay as JSON strings.
+            The workbench loads that file into a checkpointed timeline, runs Isolate (delta debugging / mRTF) to find the minimal failing fragment, then Fork opens a cleaned thread from the fault checkpoint with that fragment removed. Inspect is optional (logit lens / activation patching) and needs a heavier image; the free Render deploy does not enable it. The same Isolate and Fork path is also available from the CLI.
           </p>
         </section>
         <section>
           <h2>What is true</h2>
           <p>
-            Tests cover settings, semantics, spans, the tracer, LLM recording, the spatiotemporal fields, and the ClickHouse sink. There is no debug screen. It has not traced a live agent system outside the tests. The repo is not public.
+            There is a public repo and a live workbench at <a href="https://omnitrace.onrender.com/" rel="noopener">omnitrace.onrender.com</a>. You can drop an <code>.otlp.json</code> file or open a built-in sample (<code>supply</code>, <code>tool-loop</code>, <code>overrefusal</code>), then run Isolate and Fork in the browser. The uploaded trace stays in that session on the machine serving the page. The app is a Python HTTP server on Docker, not a static site, so it runs on Render rather than GitHub Pages.
           </p>
           <p class="callout">
-            This is the recording layer, not a finished causal debugger. The “why A caused B” part is not written yet.
+            Free Render instances sleep when idle. The first open after a pause can take about 30–60 seconds. The tutorial video slot needs <code>examples/guide.mp4</code> in the deploy; without it the page shows a placeholder.
           </p>
         </section>
         <section>
           <h2>If I continue</h2>
           <ol>
-            <li>Attach this tracer to the Celesnity loop, in place of the console exporter.</li>
-            <li>One readable query: for a checkpoint, list the tools that ran and their parent spans.</li>
-            <li>Redact prompt content before it lands in ClickHouse.</li>
+            <li>Ship a short guide video in the tutorial slot.</li>
+            <li>Attach the tracer path more tightly to Celesnity so a failed loop exports one file ready for this workbench.</li>
+            <li>Decide whether Inspect belongs on a paid tier or stays local-only.</li>
           </ol>
         </section>
       </div>
     </article>
   </main>
-  <footer class="site-footer"><div class="wrap"><span>© 2026 Dao Nguyen Dang Gia</span><span>OmniTrace 0.1</span></div></footer>
+  <footer class="site-footer"><div class="wrap"><span>© 2026 Dao Nguyen Dang Gia</span><a href="https://omnitrace.onrender.com/" rel="noopener">OmniTrace demo</a></div></footer>
   <script src="../js/site.js"></script>
 </body>
 </html>

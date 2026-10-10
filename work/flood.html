@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flooding in HCMC — Dao Nguyen Dang Gia</title>
+  <meta name="description" content="A cross-checked report on contactless flood observation and short-range neural-operator forecasts for HCMC.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="mark" href="../index.html">Dao</a>
+      <div class="nav-wrap">
+        <input class="nav-toggle" id="nav-toggle" type="checkbox">
+        <label class="nav-burger" for="nav-toggle">Menu</label>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#work">Projects</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="content">
+    <article>
+      <header class="case-hero">
+        <div class="wrap">
+          <a class="back" href="../index.html#research">← Projects</a>
+          <p class="kicker">03 · Research</p>
+          <h1>
+            Flooding in HCMC
+          </h1>
+          <p class="lede">
+            Before buying expensive hardware, rewrite the claims the old design could not defend. This is a report, not a camera pole on a street.
+          </p>
+          <table class="facts">
+            <tr>
+              <th>Field</th>
+              <td><a href="../index.html#research">Research</a></td>
+            </tr>
+            <tr>
+              <th>Role</th>
+              <td>Cross-checked the architecture and rewrote the measurement method and where the model sits</td>
+            </tr>
+            <tr>
+              <th>When</th>
+              <td>19 Sep 2026</td>
+            </tr>
+            <tr>
+              <th>Stack</th>
+              <td>Not a built system. The report discusses cameras, neural operators, and shallow-water equations.</td>
+            </tr>
+            <tr>
+              <th>Code</th>
+              <td>Not published. Not a journal paper.</td>
+            </tr>
+          </table>
+        </div>
+      </header>
+      <div class="wrap story">
+        <section>
+          <h2>Question</h2>
+          <p>
+            The scope is compound flooding in HCMC: rain, tide, drainage, and subsidence. Alley flooding is often a few tens of centimetres deep, the water is turbid, and motorbikes pass through. Can a CCTV camera estimate water-surface elevation without a staff gauge, and can that series feed a short forecast of the shallow-water equations.
+          </p>
+        </section>
+        <section>
+          <h2>Three corrections</h2>
+          <ol>
+            <li>
+              A PINN does not have to be optimized again on every frame. After training, inference is one forward pass. It breaks when the alley, the roughness, or the rainfall changes. The path to keep is a neural operator (FNO, PINO, MITONet) that learns a map between functions, placed in the forecast tier rather than as a 30-frame-per-second filter on the camera pole.
+            </li>
+            <li>
+              In turbid water the task is not to see through to the bottom. The quantity to measure is water-surface elevation. The method is to take the waterline where it meets a wall or curb, cast the ray onto a local elevation model, and take a median. A satellite DEM at tens of metres is not enough for centimetre error in an alley a few metres wide.
+            </li>
+            <li>
+              SAM 2 and Depth Anything have a place in segmentation and supporting geometry. They do not know a water surface by themselves, and a brochure frame rate is not the rate of the whole pipeline. A millimetre-wave radar, if used, is a range sensor to the water surface for cross-check, not a dense lidar for the whole frame.
+            </li>
+          </ol>
+        </section>
+        <section>
+          <h2>What is true</h2>
+          <p>
+            The report sets levels that would be publishable later: mean absolute error of water level around 5 cm against a pressure sensor by day, looser at night or in heavy rain, and CSI for flood extent at 15 minutes and 3 hours. Those are targets. There is no camera pole and no HCMC measurement set from this system, so there is no pass or fail result.
+          </p>
+          <p class="callout">
+            A Jetson AGX Orin appears as an edge-compute option, not as hardware bought for this report.
+          </p>
+        </section>
+        <section>
+          <h2>If I continue</h2>
+          <ol>
+            <li>One alley, one camera, one local DEM, checked against a staff or a pressure sensor. Measure the error before talking about a forecast.</li>
+            <li>Keep synthetic images apart from street data, and do not reuse a Houston paper’s CSI as an HCMC result.</li>
+          </ol>
+        </section>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="wrap"><span>© 2026 Dao Nguyen Dang Gia</span><span>Cross-check 19/09/2026</span></div></footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>

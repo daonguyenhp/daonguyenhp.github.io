@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OmniTrace — Dao Nguyen Dang Gia</title>
+  <meta name="description" content="OmniTrace is the telemetry layer for a multi-agent causal debugger: nested spans, checkpoints, and ClickHouse.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="mark" href="../index.html">Dao</a>
+      <div class="nav-wrap">
+        <input class="nav-toggle" id="nav-toggle" type="checkbox">
+        <label class="nav-burger" for="nav-toggle">Menu</label>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#work">Projects</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="content">
+    <article>
+      <header class="case-hero">
+        <div class="wrap">
+          <a class="back" href="../index.html#agents">← Projects</a>
+          <p class="kicker">01 · Agent systems</p>
+          <h1>OmniTrace</h1>
+          <p class="lede">
+            A debugger for multi-agent systems needs the reasoning thread, the checkpoint, and the super-step. Knowing that a request was slow is not enough.
+          </p>
+          <table class="facts">
+            <tr>
+              <th>Field</th>
+              <td><a href="../index.html#agents">Agent systems</a></td>
+            </tr>
+            <tr>
+              <th>Role</th>
+              <td>Writing the telemetry layer</td>
+            </tr>
+            <tr>
+              <th>When</th>
+              <td>In progress · version 0.1</td>
+            </tr>
+            <tr>
+              <th>Stack</th>
+              <td>Python 3.11+, pytest, ClickHouse, OpenTelemetry GenAI conventions</td>
+            </tr>
+            <tr>
+              <th>Code</th>
+              <td>Not on GitHub yet. Layer 1 has spans, semantics, and a ClickHouse sink. No interface yet.</td>
+            </tr>
+          </table>
+        </div>
+      </header>
+      <div class="wrap story">
+        <section>
+          <h2>Context</h2>
+          <p>
+            Celesnity shows that one loop can record events and isolate tools. OmniTrace asks the next question: when several agents interleave, how do you separate a meaningful step from network noise, then store it so you can later ask which checkpoint held a decision.
+          </p>
+        </section>
+        <section>
+          <h2>Approach</h2>
+          <p>
+            The tracer keeps the current span in a context variable, so a child span inherits the parent trace and parent id. Each span is one of: chat, text completion, invoke agent, create agent, or execute tool.
+          </p>
+          <p>
+            Three OmniTrace fields travel with the span and are inherited unless overridden: thread id, checkpoint id, and super-step. A semantic flag marks events that belong to the reasoning trace, apart from network I/O. Prompts and completions are stored only when RECORD_PROMPT is on.
+          </p>
+          <p>
+            ClickHouse stores a MergeTree table ordered by trace id and start time. The three spatiotemporal fields become columns. Remaining attributes and events stay as JSON strings.
+          </p>
+        </section>
+        <section>
+          <h2>What is true</h2>
+          <p>
+            Tests cover settings, semantics, spans, the tracer, LLM recording, the spatiotemporal fields, and the ClickHouse sink. There is no debug screen. It has not traced a live agent system outside the tests. The repo is not public.
+          </p>
+          <p class="callout">
+            This is the recording layer, not a finished causal debugger. The “why A caused B” part is not written yet.
+          </p>
+        </section>
+        <section>
+          <h2>If I continue</h2>
+          <ol>
+            <li>Attach this tracer to the Celesnity loop, in place of the console exporter.</li>
+            <li>One readable query: for a checkpoint, list the tools that ran and their parent spans.</li>
+            <li>Redact prompt content before it lands in ClickHouse.</li>
+          </ol>
+        </section>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="wrap"><span>© 2026 Dao Nguyen Dang Gia</span><span>OmniTrace 0.1</span></div></footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>

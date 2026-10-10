@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MedAI Cabinet — Dao Nguyen Dang Gia</title>
+  <meta name="description" content="MedAI Cabinet is a home medicine cabinet: a React app, FastAPI, AWS IoT, and ESP32 firmware.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="mark" href="../index.html">Dao</a>
+      <div class="nav-wrap">
+        <input class="nav-toggle" id="nav-toggle" type="checkbox">
+        <label class="nav-burger" for="nav-toggle">Menu</label>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#work">Projects</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="content">
+    <article>
+      <header class="case-hero">
+        <div class="wrap">
+          <a class="back" href="../index.html#hardware">← Projects</a>
+          <p class="kicker">02 · Hardware and cloud</p>
+          <h1>MedAI Cabinet</h1>
+          <p class="lede">
+            A reminder app cannot open a drawer. Firmware does not know an expiry date. This system puts those two jobs on opposite sides of one API.
+          </p>
+          <table class="facts">
+            <tr>
+              <th>Field</th>
+              <td><a href="../index.html#hardware">Hardware and cloud</a></td>
+            </tr>
+            <tr>
+              <th>Role</th>
+              <td>Designed and wrote the web app, backend, firmware, and setup scripts</td>
+            </tr>
+            <tr>
+              <th>When</th>
+              <td>May 2026</td>
+            </tr>
+            <tr>
+              <th>Stack</th>
+              <td>React, FastAPI, DynamoDB, S3, AWS IoT Core, Bedrock, SNS, ESP32, MQTT/TLS</td>
+            </tr>
+            <tr>
+              <th>Code</th>
+              <td><a href="https://github.com/daonguyenhp/medai-cabinet" rel="noopener">github.com/daonguyenhp/medai-cabinet</a></td>
+            </tr>
+          </table>
+        </div>
+      </header>
+      <div class="wrap story">
+        <section>
+          <h2>Context</h2>
+          <p>
+            Older adults miss a dose, or open the wrong compartment. A carer only sees it if there is a schedule and a way to be notified. A “smart” cabinet easily becomes an app that never touches the object, or a servo circuit with no medication record.
+          </p>
+        </section>
+        <section>
+          <h2>Approach</h2>
+          <p>
+            The React app is for the household: medications, stock, expiry, today’s schedule, doses taken. FastAPI sits in the middle. Records live in DynamoDB, images in S3. An open-drawer command goes through AWS IoT Core over MQTT/TLS to the ESP32. Carer alerts go through SNS.
+          </p>
+          <p>
+            The symptom conversation calls Amazon Bedrock, using Claude. It is a follow-up layer, not a diagnosis. The ESP32 DevKit firmware drives three SG90 servos, a DHT22 for temperature and humidity, an SSD1306 OLED, an LED, and a buzzer.
+          </p>
+        </section>
+        <section>
+          <h2>What is true</h2>
+          <p>
+            The repo has the four layers: frontend, backend, PlatformIO firmware, and a script that creates the AWS resources. The API covers medications, schedules, dose history, symptom analysis, chat, a dashboard summary, alerts, and device telemetry.
+          </p>
+          <p class="callout">
+            The cloud path needs an AWS account. Bedrock is billed per token. There is no household count, and no clinical accuracy to publish. This triage does not replace a clinician.
+          </p>
+        </section>
+        <section>
+          <h2>If I continue</h2>
+          <ol>
+            <li>A local mode with no AWS, so someone can click a schedule and a simulated drawer.</li>
+            <li>A hard limit on what the symptom layer is allowed to say, with a log of refusals.</li>
+          </ol>
+        </section>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="wrap"><span>© 2026 Dao Nguyen Dang Gia</span><a href="https://github.com/daonguyenhp/medai-cabinet" rel="noopener">MedAI Cabinet</a></div></footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>

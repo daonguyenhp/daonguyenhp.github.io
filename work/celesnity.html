@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Celesnity — Dao Nguyen Dang Gia</title>
+  <meta name="description" content="Celesnity is an event-sourced agent runtime that isolates tools behind MCP, built with FastAPI and SQLite.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="mark" href="../index.html">Dao</a>
+      <div class="nav-wrap">
+        <input class="nav-toggle" id="nav-toggle" type="checkbox">
+        <label class="nav-burger" for="nav-toggle">Menu</label>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#work">Projects</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="content">
+    <article>
+      <header class="case-hero">
+        <div class="wrap">
+          <a class="back" href="../index.html#agents">← Projects</a>
+          <p class="kicker">01 · Agent systems</p>
+          <h1>Celesnity</h1>
+          <p class="lede">
+            The agent loop does not talk to the outside world except through MCP. Every state change is an append-only event.
+          </p>
+          <table class="facts">
+            <tr>
+              <th>Field</th>
+              <td><a href="../index.html#agents">Agent systems</a></td>
+            </tr>
+            <tr>
+              <th>Role</th>
+              <td>Designed and wrote the runtime</td>
+            </tr>
+            <tr>
+              <th>When</th>
+              <td>Sep 2026</td>
+            </tr>
+            <tr>
+              <th>Stack</th>
+              <td>Python, FastAPI, SQLite WAL, MCP JSON-RPC, OpenTelemetry</td>
+            </tr>
+            <tr>
+              <th>Code</th>
+              <td><a href="https://github.com/daonguyenhp/Celesnity" rel="noopener">github.com/daonguyenhp/Celesnity</a></td>
+            </tr>
+          </table>
+        </div>
+      </header>
+      <div class="wrap story">
+        <section>
+          <h2>Context</h2>
+          <p>
+            Agent demos often paste the model, the tools, and HTTP into one place. A stuck tool stalls the web request. When the model calls the wrong tool, the record is a print statement.
+          </p>
+        </section>
+        <section>
+          <h2>Constraints</h2>
+          <ul>
+            <li>HTTP returns immediately. Long work stays in a worker tied to the process lifespan.</li>
+            <li>SQLite is the source of truth. Session state is rebuilt by replaying the log, not edited in place.</li>
+            <li>Swapping the mock for OpenAI must not touch the loop.</li>
+            <li>It has to run with no API key.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Approach</h2>
+          <p>
+            FastAPI accepts a session and a task, then queues the work. An asyncio worker runs AgentEngine in five beats: Observe, Reason, Act, Execute, Feedback. Observe rebuilds messages from the event log. Execute goes only through the MCP client, with a timeout and a circuit breaker. The event table is unique on the session and sequence pair.
+          </p>
+          <p>
+            The default LLM is MockLLMProvider. Telemetry spans use GenAI-like names: agent.run, llm.generate, tool.call. The loop stops after 15 iterations, and cools down when the same failure repeats.
+          </p>
+        </section>
+        <section>
+          <h2>What is true</h2>
+          <p>
+            The API can create a session, submit work, read status, cancel, and stream over SSE. The README scenarios cover a business-error recovery, a hallucinated tool, a slow MCP call, and a mid-run cancel. There is no production latency number. There are no outside users.
+          </p>
+          <p class="callout">
+            The queue is in memory. If the process dies after a task is accepted and before a worker runs it, that task is gone. The README states this limit.
+          </p>
+        </section>
+        <section>
+          <h2>If I continue</h2>
+          <ol>
+            <li>Make the recorded task the durable unit of work, leased to workers, instead of only queueing it in RAM.</li>
+            <li>Move the mock JSON-RPC onto a real MCP session lifecycle.</li>
+            <li>Export OTel to Tempo and redact tool arguments that hold personal data.</li>
+          </ol>
+        </section>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="wrap"><span>© 2026 Dao Nguyen Dang Gia</span><a href="https://github.com/daonguyenhp/Celesnity" rel="noopener">Celesnity</a></div></footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>

@@ -915,6 +915,35 @@ a.panel:hover,
   text-transform: uppercase;
 }
 
+.case-media {
+  max-width: 56rem;
+  padding: 1.4rem 0 0;
+}
+
+.case-figure {
+  margin: 0;
+}
+
+.case-figure + .case-figure,
+.story .case-figure {
+  margin-top: 1.25rem;
+}
+
+.case-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.case-figure figcaption {
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 .story {
   max-width: 42rem;
   display: grid;

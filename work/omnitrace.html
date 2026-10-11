@@ -71,37 +71,40 @@
           </table>
         </div>
       </header>
+      <div class="wrap case-media">
+        <figure class="case-figure">
+          <img src="../images/work/omnitrace/OmniTrace.png" alt="OmniTrace hero: isolate the cause on an old run, then fork a cleaned thread to resume" width="1024" height="380" loading="lazy">
+          <figcaption>Isolate the failing span, then fork a cleaned thread.</figcaption>
+        </figure>
+      </div>
       <div class="wrap story">
         <section>
           <h2>Context</h2>
           <p>
-            In a multi-step agent trace, the span that shows the failure is often not where the bad context entered. Knowing that a request was slow is not enough. You need a timeline of steps, a way to shrink the failing context, and a way to resume without that piece.
+            When an agent fails, the error span is often not the real cause. You need the step timeline, a way to cut the bad context down, and a clean thread to continue from.
           </p>
         </section>
         <section>
           <h2>Approach</h2>
           <p>
-            Input is one failed run as OpenTelemetry GenAI JSON (<code>resourceSpans</code>). Steps are spans named <code>chat</code> or <code>execute_tool</code>. A symptom is usually <code>STATUS_CODE_ERROR</code>. An oracle on the resource can define “still failing” (<code>contains</code> or <code>tool_repeat</code>); if it is missing, the exception message or a tool-repeat heuristic is used.
-          </p>
-          <p>
-            The workbench loads that file into a checkpointed timeline, runs Isolate (delta debugging / mRTF) to find the minimal failing fragment, then Fork opens a cleaned thread from the fault checkpoint with that fragment removed. Inspect is optional (logit lens / activation patching) and needs a heavier image; the free Render deploy does not enable it. The same Isolate and Fork path is also available from the CLI.
+            Load one failed run as OpenTelemetry GenAI JSON. Isolate finds the smallest piece that still fails. Fork starts a new thread with that piece removed. Inspect is optional and off on the free Render demo. CLI covers Isolate and Fork too.
           </p>
         </section>
         <section>
           <h2>What is true</h2>
           <p>
-            There is a public repo and a live workbench at <a href="https://omnitrace.onrender.com/" rel="noopener">omnitrace.onrender.com</a>. You can drop an <code>.otlp.json</code> file or open a built-in sample (<code>supply</code>, <code>tool-loop</code>, <code>overrefusal</code>), then run Isolate and Fork in the browser. The uploaded trace stays in that session on the machine serving the page. The app is a Python HTTP server on Docker, not a static site, so it runs on Render rather than GitHub Pages.
+            Public repo and live demo at <a href="https://omnitrace.onrender.com/" rel="noopener">omnitrace.onrender.com</a>: drop a file or open a sample, then run Isolate and Fork. Trace stays on that machine. Hosted on Render because it is a Docker app, not a static page.
           </p>
           <p class="callout">
-            Free Render instances sleep when idle. The first open after a pause can take about 30–60 seconds. The tutorial video slot needs <code>examples/guide.mp4</code> in the deploy; without it the page shows a placeholder.
+            Free Render sleeps when idle — first open can take 30–60 seconds. Tutorial video is still a placeholder.
           </p>
         </section>
         <section>
           <h2>If I continue</h2>
           <ol>
-            <li>Ship a short guide video in the tutorial slot.</li>
-            <li>Attach the tracer path more tightly to Celesnity so a failed loop exports one file ready for this workbench.</li>
-            <li>Decide whether Inspect belongs on a paid tier or stays local-only.</li>
+            <li>Add a short tutorial video.</li>
+            <li>Wire Celesnity so a failed run exports one file for this workbench.</li>
+            <li>Keep Inspect local, or put it on a paid tier.</li>
           </ol>
         </section>
       </div>

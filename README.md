@@ -20,7 +20,7 @@ Máy chưa có Python thì bấm đúp `index.html`. Bộ lọc và các trang p
 
 - Trang chủ: `index.html`
 - Case study: `work/`
-- Ảnh minh họa: thả file vào `images/work/<tên-project>/` rồi trỏ `src` trong case study (ví dụ `images/work/omnitrace/OmniTrace.png`)
+- Ảnh minh họa (khi có): thả vào `images/work/<tên-project>/` rồi trỏ `src` trong case study
 - Thẻ lọc nằm ở thuộc tính `data-tags` trên từng thẻ project: `software`, `ai`, `data`, `robot`
 
 ## Đưa lên mạng, không mất phí

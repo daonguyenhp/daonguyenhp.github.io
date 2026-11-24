@@ -3,28 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ICEAM — Dao Nguyen Dang Gia</title>
-  <meta name="description" content="ICEAM is a team course project: a chatbot for small shops that reads stock from Excel and calls a model.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>ICEAM · Nguyen Dang Gia Dao</title>
+  <meta name="description" content="ICEAM is an award-winning chatbot for small shops that reads stock from Excel and calls an LLM. Won Third Prize in the AI in Business competition.">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/site.css">
 </head>
 <body>
-  <a class="skip" href="#content">Skip to content</a>
+  <a class="skip" href="#content">Skip to main content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="mark" href="../index.html">Dao</a>
+      <a class="mark" href="../index.html" translate="no"><img class="mark-logo" src="../images/kemda-logo.svg" alt="KEMDA" width="38" height="38"><span class="mark-full">Nguyen Dang Gia Dao</span><span class="mark-short">KEMDA</span></a>
       <div class="nav-wrap">
-        <input class="nav-toggle" id="nav-toggle" type="checkbox">
-        <label class="nav-burger" for="nav-toggle">Menu</label>
-        <nav class="nav-links" aria-label="Primary">
+        <button class="nav-burger" type="button" data-nav-burger aria-expanded="false" aria-controls="primary-nav">Open menu</button>
+        <nav class="nav-links" id="primary-nav" aria-label="Primary">
+          <a href="../index.html#home">Home</a>
           <a href="../index.html#work">Projects</a>
+          <a href="../index.html#awards">Awards</a>
           <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#leadership">Leadership</a>
           <a href="../index.html#skills">Skills</a>
-          <a href="../index.html#about">About</a>
-          <a href="../index.html#contact">Contact</a>
+          <a href="../index.html#about">About &amp; Contact</a>
         </nav>
       </div>
     </div>
@@ -33,18 +35,32 @@
     <article>
       <header class="case-hero">
         <div class="wrap">
-          <a class="back" href="../index.html#products">← Projects</a>
-          <p class="kicker">04 · Products and applied ML</p>
-          <h1>ICEAM</h1>
-          <p class="lede">A chatbot for a small shop. Stock lives in Excel. Answers come from a model called through OpenRouter.</p>
+          <a class="back" href="../index.html#ai-software">← Return to projects</a>
+          <p class="kicker">01 · AI systems and software · ★ Third Prize in AI in Business</p>
+          <h1 translate="no">ICEAM</h1>
+          <ul class="tags" aria-label="Tags">
+            <li class="tag tag-award">★ AI in Business</li>
+            <li class="tag">Award-winning</li>
+            <li class="tag">Software</li>
+            <li class="tag">AI</li>
+          </ul>
+          <p class="lede">A chatbot for a small shop. Stock lives in Excel. Answers come from a model called through OpenRouter. Awarded Third Prize in the AI in Business competition.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://github.com/daonguyenhp/xinloividaden" rel="noopener">View source on GitHub</a>
+            <a class="button-secondary" href="../index.html#award-iceam">View competition award &amp; proof</a>
+          </div>
           <table class="facts">
             <tr>
               <th>Field</th>
-              <td><a href="../index.html#products">Products and applied ML</a></td>
+              <td><a href="../index.html#ai-software">AI systems and software</a></td>
+            </tr>
+            <tr>
+              <th>Award</th>
+              <td><a href="../index.html#award-iceam">Third Prize · AI in Business competition</a></td>
             </tr>
             <tr>
               <th>Role</th>
-              <td>Team project for a faculty course. This page does not split the files by person.</td>
+              <td>Team project for the AI in Business competition and faculty coursework.</td>
             </tr>
             <tr>
               <th>When</th>
@@ -52,11 +68,11 @@
             </tr>
             <tr>
               <th>Stack</th>
-              <td>Node.js, Excel knowledge base, OpenRouter, DeepSeek</td>
+              <td translate="no">Node.js, Excel knowledge base, OpenRouter, DeepSeek</td>
             </tr>
             <tr>
               <th>Code</th>
-              <td><a href="https://github.com/daonguyenhp/xinloividaden" rel="noopener">github.com/daonguyenhp/xinloividaden</a></td>
+              <td><a href="https://github.com/daonguyenhp/xinloividaden" rel="noopener">View github.com/daonguyenhp/xinloividaden</a></td>
             </tr>
           </table>
         </div>
@@ -64,24 +80,24 @@
       <div class="wrap story">
         <section>
           <h2>Context</h2>
-          <p>A shop assistant that only chats is not useful if it cannot see what is in stock. The project keeps the stock in a spreadsheet and lets the model answer from that file.</p>
+          <p>A shop assistant that only chats is not useful if it cannot see what is in stock. The project keeps the stock in a spreadsheet and lets the model answer directly from that file.</p>
         </section>
         <section>
           <h2>What it does</h2>
           <ul>
-            <li>Node.js reads the stock from Excel.</li>
-            <li>Questions go to a model through OpenRouter.</li>
-            <li>The write-up is a course report in the computer science faculty, May 2025.</li>
+            <li>Node.js reads live inventory and product rows from Excel.</li>
+            <li>Customer questions go to a language model through OpenRouter grounded on the spreadsheet context.</li>
+            <li>Won <strong>Third Prize</strong> in the <strong>AI in Business</strong> competition (<a href="../index.html#award-iceam">view award details and proof</a>).</li>
           </ul>
         </section>
         <section>
           <h2>What is true</h2>
-          <p>This is team work. The course report is from May 2025. The GitHub repo was created in Jan 2026. There is no shop count, no accuracy number, and no claim that a store is using it.</p>
+          <p>This is team work from May 2025, recognized with Third Prize in the AI in Business competition. The GitHub repository was published in Jan 2026. There is no live store deployment count beyond the competition and course evaluation.</p>
         </section>
       </div>
     </article>
   </main>
-  <footer class="site-footer"><div class="wrap"><span>© 2026 Dao Nguyen Dang Gia</span><a href="https://github.com/daonguyenhp/xinloividaden" rel="noopener">ICEAM</a></div></footer>
+  <footer class="site-footer"><div class="wrap"><span>© 2026 Nguyen Dang Gia Dao</span><a href="https://github.com/daonguyenhp/xinloividaden" rel="noopener">View ICEAM repository</a></div></footer>
   <script src="../js/site.js"></script>
 </body>
 </html>

@@ -3,28 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OmniTrace — Dao Nguyen Dang Gia</title>
+  <meta name="theme-color" content="#f7f6f2">
+  <title>OmniTrace · Nguyen Dang Gia Dao</title>
   <meta name="description" content="OmniTrace is a debugger for one failed agent run: load an OTLP JSON trace, isolate the failing span, fork a cleaned thread. Live demo on Render.">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/site.css">
 </head>
 <body>
-  <a class="skip" href="#content">Skip to content</a>
+  <a class="skip" href="#content">Skip to main content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="mark" href="../index.html">Dao</a>
+      <a class="mark" href="../index.html" translate="no"><img class="mark-logo" src="../images/kemda-logo.svg" alt="KEMDA" width="38" height="38"><span class="mark-full">Nguyen Dang Gia Dao</span><span class="mark-short">KEMDA</span></a>
       <div class="nav-wrap">
-        <input class="nav-toggle" id="nav-toggle" type="checkbox">
-        <label class="nav-burger" for="nav-toggle">Menu</label>
-        <nav class="nav-links" aria-label="Primary">
+        <button class="nav-burger" type="button" data-nav-burger aria-expanded="false" aria-controls="primary-nav">Open menu</button>
+        <nav class="nav-links" id="primary-nav" aria-label="Primary">
+          <a href="../index.html#home">Home</a>
           <a href="../index.html#work">Projects</a>
+          <a href="../index.html#awards">Awards</a>
           <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#leadership">Leadership</a>
           <a href="../index.html#skills">Skills</a>
-          <a href="../index.html#about">About</a>
-          <a href="../index.html#contact">Contact</a>
+          <a href="../index.html#about">About &amp; Contact</a>
         </nav>
       </div>
     </div>
@@ -33,20 +35,20 @@
     <article>
       <header class="case-hero">
         <div class="wrap">
-          <a class="back" href="../index.html#agents">← Projects</a>
-          <p class="kicker">01 · Agent systems</p>
-          <h1>OmniTrace</h1>
+          <a class="back" href="../index.html#ai-software">← Return to projects</a>
+          <p class="kicker">01 · AI systems and software</p>
+          <h1 translate="no">OmniTrace</h1>
           <p class="lede">
             Drop in the trace of a run that just failed. OmniTrace finds the smallest piece that still fails, then opens a new thread with that piece removed.
           </p>
           <div class="hero-actions">
             <a class="button" href="https://omnitrace.onrender.com/" rel="noopener">Open live demo</a>
-            <a class="quiet" href="https://github.com/daonguyenhp/OmniTrace" rel="noopener">GitHub</a>
+            <a class="button-secondary" href="https://github.com/daonguyenhp/OmniTrace" rel="noopener">View source on GitHub</a>
           </div>
           <table class="facts">
             <tr>
               <th>Field</th>
-              <td><a href="../index.html#agents">Agent systems</a></td>
+              <td><a href="../index.html#ai-software">AI systems and software</a></td>
             </tr>
             <tr>
               <th>Role</th>
@@ -58,15 +60,15 @@
             </tr>
             <tr>
               <th>Stack</th>
-              <td>Python 3.11+, OpenTelemetry GenAI JSON, ddmin / mRTF, Docker, Render</td>
+              <td translate="no">Python 3.11+, OpenTelemetry GenAI JSON, ddmin / mRTF, Docker, Render</td>
             </tr>
             <tr>
               <th>Demo</th>
-              <td><a href="https://omnitrace.onrender.com/" rel="noopener">omnitrace.onrender.com</a></td>
+              <td><a href="https://omnitrace.onrender.com/" rel="noopener">Open omnitrace.onrender.com</a></td>
             </tr>
             <tr>
               <th>Code</th>
-              <td><a href="https://github.com/daonguyenhp/OmniTrace" rel="noopener">github.com/daonguyenhp/OmniTrace</a></td>
+              <td><a href="https://github.com/daonguyenhp/OmniTrace" rel="noopener">View github.com/daonguyenhp/OmniTrace</a></td>
             </tr>
           </table>
         </div>
@@ -90,21 +92,21 @@
             Public repo and live demo at <a href="https://omnitrace.onrender.com/" rel="noopener">omnitrace.onrender.com</a>: drop a file or open a sample, then run Isolate and Fork. Trace stays on that machine. Hosted on Render because it is a Docker app, not a static page.
           </p>
           <p class="callout">
-            Free Render sleeps when idle — first open can take 30–60 seconds. Tutorial video is still a placeholder.
+            Free Render sleeps when idle, so the first open can take 30–60 seconds. Tutorial video is still a placeholder.
           </p>
         </section>
         <section>
           <h2>If I continue</h2>
           <ol>
             <li>Add a short tutorial video.</li>
-            <li>Wire Celesnity so a failed run exports one file for this workbench.</li>
+            <li>Export a failed agent run directly into one trace file for this workbench.</li>
             <li>Keep Inspect local, or put it on a paid tier.</li>
           </ol>
         </section>
       </div>
     </article>
   </main>
-  <footer class="site-footer"><div class="wrap"><span>© 2026 Dao Nguyen Dang Gia</span><a href="https://omnitrace.onrender.com/" rel="noopener">OmniTrace demo</a></div></footer>
+  <footer class="site-footer"><div class="wrap"><span>© 2026 Nguyen Dang Gia Dao</span><a href="https://omnitrace.onrender.com/" rel="noopener">Open OmniTrace demo</a></div></footer>
   <script src="../js/site.js"></script>
 </body>
 </html>

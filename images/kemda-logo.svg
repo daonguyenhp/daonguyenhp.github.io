@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="KEMDA 2x2 Monogram">
+  <!-- Pure white surface matching portfolio L1 card surface -->
+  <rect width="120" height="120" rx="22" fill="#ffffff"/>
+  <g fill="none" stroke-width="11.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- TOP-LEFT BLOCK (x: 18..50, y: 18..52): Letter K in Deep Ink (#141413) -->
+    <path stroke="#141413" d="M 20 18 V 52 M 48 18 L 22 35 L 48 52"/>
+
+    <!-- TOP-RIGHT BLOCK (x: 68..102, y: 18..52): Creative "EM" Ligature Monogram in Terracotta Accent (#c2410c) -->
+    <!-- Left vertical stem + 3 horizontal bars of E seamlessly fused into the M arches on the right -->
+    <path stroke="#c2410c" d="M 80 18 H 68 V 52 H 80 M 68 35 H 78 M 80 52 V 18 L 91 36 L 102 18 V 52"/>
+
+    <!-- BOTTOM-LEFT BLOCK (x: 18..50, y: 68..102): Letter D in Terracotta Accent (#c2410c) -->
+    <path stroke="#c2410c" d="M 20 68 V 102 H 34 C 44 102 49 95 49 85 C 49 75 44 68 34 68 Z"/>
+
+    <!-- BOTTOM-RIGHT BLOCK (x: 68..102, y: 68..102): Letter A in Deep Ink (#141413) -->
+    <path stroke="#141413" d="M 69 102 L 85 68 L 101 102 M 74 91 H 96"/>
+  </g>
+</svg>

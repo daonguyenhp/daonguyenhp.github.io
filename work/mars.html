@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>MARS Modular · Nguyen Dang Gia Dao</title>
+  <meta name="description"
+    content="MARS Modular is a C++17 and ROS 2 autonomous robot navigation stack for escaping blind-alley regions with limited vision range.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+
+<body>
+  <a class="skip" href="#content">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="mark" href="../index.html" translate="no"><img class="mark-logo" src="../images/kemda-logo.svg"
+          alt="KEMDA" width="38" height="38"><span class="mark-full">Nguyen Dang Gia Dao</span><span
+          class="mark-short">KEMDA</span></a>
+      <div class="nav-wrap">
+        <button class="nav-burger" type="button" data-nav-burger aria-expanded="false" aria-controls="primary-nav">Open
+          menu</button>
+        <nav class="nav-links" id="primary-nav" aria-label="Primary">
+          <a href="../index.html#home">Home</a>
+          <a href="../index.html#work">Projects</a>
+          <a href="../index.html#awards">Awards</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#leadership">Leadership</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../index.html#about">About &amp; Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="content">
+    <article>
+      <header class="case-hero">
+        <div class="wrap">
+          <a class="back" href="../index.html#embodied-ai">← Return to projects</a>
+          <p class="kicker">02 · Embodied AI and robotics</p>
+          <h1 translate="no">MARS Modular</h1>
+          <p class="lede">
+            Modular C++17 &amp; ROS 2 navigation stack for autonomous robots with limited vision range to detect and
+            escape blind-alley regions.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="https://github.com/daonguyenhp/MARS_Modular" target="_blank" rel="noopener">View
+              source on GitHub</a>
+          </div>
+          <table class="facts">
+            <tr>
+              <th>Field</th>
+              <td><a href="../index.html#embodied-ai">Embodied AI and robotics</a></td>
+            </tr>
+            <tr>
+              <th>Role</th>
+              <td>Implemented the 4-module C++17 navigation pipeline and ROS 1 / ROS 2 simulation runners</td>
+            </tr>
+            <tr>
+              <th>Stack</th>
+              <td translate="no">C++17, ROS 2, ROS 1 Noetic, CMake, Gazebo, RViz, Python</td>
+            </tr>
+            <tr>
+              <th>Code</th>
+              <td><a href="https://github.com/daonguyenhp/MARS_Modular" target="_blank"
+                  rel="noopener">github.com/daonguyenhp/MARS_Modular</a></td>
+            </tr>
+          </table>
+        </div>
+      </header>
+
+      <section class="wrap case-visual-grid" aria-label="Algorithm diagram and simulation demo">
+        <figure class="case-visual-card">
+          <div class="case-visual-head">
+            <h2 class="case-visual-title">Algorithm &amp; trajectory</h2>
+            <span class="case-visual-badge">Sight rays &amp; bundles</span>
+          </div>
+          <button type="button" class="case-visual-frame" data-proof-src="../images/work/mars/Thuật toán.jpg"
+            data-proof-title="MARS Modular — Sight Rays, Visibility Graph &amp; Escape Trajectory">
+            <img src="../images/work/mars/Thuật toán.jpg"
+              alt="4-panel algorithm plot: closed/open sights, visibility graph to open points, ray bundles, and shorter blind-alley escape trajectory."
+              width="1600" height="1560" loading="eager">
+          </button>
+          <figcaption>Click image to enlarge · Closed/open sights (8a), visibility graph (8b), ray bundles (9b), and
+            optimized escape path (9c).</figcaption>
+        </figure>
+
+        <figure class="case-visual-card">
+          <div class="case-visual-head">
+            <h2 class="case-visual-title">Jettank demo (3×)</h2>
+            <span class="case-visual-badge">Simulation video</span>
+          </div>
+          <div class="case-visual-frame">
+            <video controls muted loop playsinline preload="metadata">
+              <source src="../images/work/mars/Demo%20Jettank%20_%20Speed%203x.mp4" type="video/mp4">
+            </video>
+          </div>
+          <figcaption>Jettank autonomous navigation and blind-alley escape demo running at 3× speed.</figcaption>
+        </figure>
+      </section>
+
+      <div class="wrap story">
+        <section>
+          <h2>4-module architecture</h2>
+          <div class="case-module-grid">
+            <div class="case-module-item">
+              <h3>01 · Perception geometry</h3>
+              <p>Extracts closed/open sights, neighbor sights, and candidate open points from limited-range LiDAR scans.
+              </p>
+            </div>
+            <div class="case-module-item">
+              <h3>02 · Graph &amp; bundle memory</h3>
+              <p>Updates the visibility graph, sequences of line-segment bundles, and ranking memory across steps.</p>
+            </div>
+            <div class="case-module-item">
+              <h3>03 · Navigation decision</h3>
+              <p>Selects forward targets, detects dead-end traps, and computes collision-free escape angles via DAP
+                funnel.</p>
+            </div>
+            <div class="case-module-item">
+              <h3>04 · ROS 1 &amp; ROS 2 simulation</h3>
+              <p>Runs Mode 1 C++ benchmarks, SVG trajectory plots, and full Gazebo / RViz robot simulations.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <dialog class="proof-dialog" id="proof-dialog" aria-labelledby="proof-dialog-title">
+    <div class="proof-dialog-inner">
+      <header class="proof-dialog-bar">
+        <h2 class="proof-dialog-title" id="proof-dialog-title">Algorithm diagram</h2>
+        <button type="button" class="proof-dialog-close" data-proof-close aria-label="Close preview">Close ✕</button>
+      </header>
+      <div class="proof-dialog-body">
+        <img id="proof-dialog-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          alt="">
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap"><span>© 2026 Nguyen Dang Gia Dao</span><a href="https://github.com/daonguyenhp/MARS_Modular"
+        target="_blank" rel="noopener">View MARS_Modular repository</a></div>
+  </footer>
+  <script src="../js/site.js"></script>
+</body>
+
+</html>

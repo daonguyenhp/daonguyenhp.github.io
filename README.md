@@ -1,4 +1,4 @@
-# Portfolio — Dao Nguyen Dang Gia
+# Portfolio — Nguyen Dang Gia Dao
 
 Site tĩnh, tiếng Anh, không cần build.
 

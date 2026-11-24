@@ -3,28 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PCA faces — Dao Nguyen Dang Gia</title>
+  <meta name="theme-color" content="#f7f6f2">
+  <title>PCA faces · Nguyen Dang Gia Dao</title>
   <meta name="description" content="PCA faces is a team project that builds eigenfaces from a webcam with OpenCV and Tkinter.">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/site.css">
 </head>
 <body>
-  <a class="skip" href="#content">Skip to content</a>
+  <a class="skip" href="#content">Skip to main content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="mark" href="../index.html">Dao</a>
+      <a class="mark" href="../index.html" translate="no"><img class="mark-logo" src="../images/kemda-logo.svg" alt="KEMDA" width="38" height="38"><span class="mark-full">Nguyen Dang Gia Dao</span><span class="mark-short">KEMDA</span></a>
       <div class="nav-wrap">
-        <input class="nav-toggle" id="nav-toggle" type="checkbox">
-        <label class="nav-burger" for="nav-toggle">Menu</label>
-        <nav class="nav-links" aria-label="Primary">
+        <button class="nav-burger" type="button" data-nav-burger aria-expanded="false" aria-controls="primary-nav">Open menu</button>
+        <nav class="nav-links" id="primary-nav" aria-label="Primary">
+          <a href="../index.html#home">Home</a>
           <a href="../index.html#work">Projects</a>
+          <a href="../index.html#awards">Awards</a>
           <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#leadership">Leadership</a>
           <a href="../index.html#skills">Skills</a>
-          <a href="../index.html#about">About</a>
-          <a href="../index.html#contact">Contact</a>
+          <a href="../index.html#about">About &amp; Contact</a>
         </nav>
       </div>
     </div>
@@ -33,14 +35,17 @@
     <article>
       <header class="case-hero">
         <div class="wrap">
-          <a class="back" href="../index.html#products">← Projects</a>
-          <p class="kicker">04 · Products and applied ML</p>
+          <a class="back" href="../index.html#research">← Return to projects</a>
+          <p class="kicker">03 · AI research and computer vision</p>
           <h1>PCA faces</h1>
           <p class="lede">Take a face from the webcam, find it with OpenCV, and recognize it with PCA written in the project.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://github.com/daonguyenhp/mt1007_pca" rel="noopener">View source on GitHub</a>
+          </div>
           <table class="facts">
             <tr>
               <th>Field</th>
-              <td><a href="../index.html#products">Products and applied ML</a></td>
+              <td><a href="../index.html#research">AI research and computer vision</a></td>
             </tr>
             <tr>
               <th>Role</th>
@@ -52,11 +57,11 @@
             </tr>
             <tr>
               <th>Stack</th>
-              <td>Python, OpenCV Haar cascade, PCA, Tkinter</td>
+              <td translate="no">Python, OpenCV Haar cascade, PCA, Tkinter</td>
             </tr>
             <tr>
               <th>Code</th>
-              <td><a href="https://github.com/daonguyenhp/mt1007_pca" rel="noopener">github.com/daonguyenhp/mt1007_pca</a></td>
+              <td><a href="https://github.com/daonguyenhp/mt1007_pca" rel="noopener">View github.com/daonguyenhp/mt1007_pca</a></td>
             </tr>
           </table>
         </div>
@@ -81,7 +86,7 @@
       </div>
     </article>
   </main>
-  <footer class="site-footer"><div class="wrap"><span>© 2026 Dao Nguyen Dang Gia</span><a href="https://github.com/daonguyenhp/mt1007_pca" rel="noopener">PCA faces</a></div></footer>
+  <footer class="site-footer"><div class="wrap"><span>© 2026 Nguyen Dang Gia Dao</span><a href="https://github.com/daonguyenhp/mt1007_pca" rel="noopener">View PCA faces repository</a></div></footer>
   <script src="../js/site.js"></script>
 </body>
 </html>

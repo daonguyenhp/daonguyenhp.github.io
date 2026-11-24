@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dao Nguyen Dang Gia — Computer Science, HCMUT</title>
-  <meta name="description" content="Dao Nguyen Dang Gia, a computer science student at HCMUT. Systems around models: software, hardware, and research.">
-  <meta name="author" content="Dao Nguyen Dang Gia">
-  <meta property="og:title" content="Dao Nguyen Dang Gia">
-  <meta property="og:description" content="Computer science student at HCMUT. Agent systems, hardware, research, and products.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Nguyen Dang Gia Dao · Computer Science, HCMUT</title>
+  <meta name="description"
+    content="Nguyen Dang Gia Dao, a computer science student at HCMUT. Systems around models: software, hardware, and research.">
+  <meta name="author" content="Nguyen Dang Gia Dao">
+  <meta property="og:title" content="Nguyen Dang Gia Dao">
+  <meta property="og:description"
+    content="Computer science student at HCMUT. Agent systems, hardware, research, and products.">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/site.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Dao Nguyen Dang Gia",
+    "name": "Nguyen Dang Gia Dao",
     "alternateName": "Nguyễn Đăng Gia Đạo",
-    "email": "dao.nguyenhp2311@hcmut.edu.vn",
+    "email": "giadao23112006@gmail.com",
     "jobTitle": "Computer Science Student",
     "url": "https://github.com/daonguyenhp",
     "affiliation": {
@@ -30,67 +35,130 @@
     },
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Di An",
-      "addressRegion": "Binh Duong",
+      "addressLocality": "Ho Chi Minh City",
+      "addressRegion": "Ho Chi Minh City",
       "addressCountry": "VN"
     },
-    "sameAs": ["https://github.com/daonguyenhp"]
+    "sameAs": [
+      "https://github.com/daonguyenhp",
+      "https://www.linkedin.com/in/daonguyenhp/"
+    ]
   }
   </script>
 </head>
+
 <body>
-  <a class="skip" href="#content">Skip to content</a>
+  <a class="skip" href="#content">Skip to main content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="mark" href="index.html"><span class="mark-full">Dao Nguyen Dang Gia</span><span class="mark-short">Dao</span></a>
+      <a class="mark" href="index.html" translate="no">
+        <img class="mark-logo" src="images/kemda-logo.svg" alt="KEMDA" width="38" height="38">
+        <span class="mark-full">Nguyen Dang Gia Dao</span>
+        <span class="mark-short">KEMDA</span>
+      </a>
       <div class="nav-wrap">
-        <input class="nav-toggle" id="nav-toggle" type="checkbox">
-        <label class="nav-burger" for="nav-toggle">Menu</label>
-        <nav class="nav-links" aria-label="Primary">
+        <button class="nav-burger" type="button" data-nav-burger aria-expanded="false" aria-controls="primary-nav">Open
+          menu</button>
+        <nav class="nav-links" id="primary-nav" aria-label="Primary">
+          <a href="#home" aria-current="page">Home</a>
           <a href="#work">Projects</a>
+          <a href="#awards">Awards</a>
           <a href="#experience">Experience</a>
+          <a href="#leadership">Leadership</a>
           <a href="#skills">Skills</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="#about">About &amp; Contact</a>
         </nav>
       </div>
     </div>
   </header>
 
+  <nav class="section-rail" aria-label="Section progress">
+    <a class="rail-link is-passed is-active" href="#home" data-rail-link="home" aria-current="page">
+      <span class="rail-label">Home</span>
+      <span class="rail-pip" aria-hidden="true"></span>
+    </a>
+    <a class="rail-link" href="#work" data-rail-link="work">
+      <span class="rail-label">Projects</span>
+      <span class="rail-pip" aria-hidden="true"></span>
+    </a>
+    <a class="rail-link" href="#awards" data-rail-link="awards">
+      <span class="rail-label">Awards</span>
+      <span class="rail-pip" aria-hidden="true"></span>
+    </a>
+    <a class="rail-link" href="#experience" data-rail-link="experience">
+      <span class="rail-label">Experience</span>
+      <span class="rail-pip" aria-hidden="true"></span>
+    </a>
+    <a class="rail-link" href="#leadership" data-rail-link="leadership">
+      <span class="rail-label">Leadership</span>
+      <span class="rail-pip" aria-hidden="true"></span>
+    </a>
+    <a class="rail-link" href="#skills" data-rail-link="skills">
+      <span class="rail-label">Skills</span>
+      <span class="rail-pip" aria-hidden="true"></span>
+    </a>
+    <a class="rail-link" href="#about" data-rail-link="about">
+      <span class="rail-label">About</span>
+      <span class="rail-pip" aria-hidden="true"></span>
+    </a>
+  </nav>
+
   <main id="content">
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="wrap hero-layout">
         <div>
-          <p class="eyebrow">Computer Science · Ho Chi Minh City University of Technology</p>
-          <h1>Dao Nguyen Dang Gia</h1>
-          <p class="lede">Computer science student at HCMUT. I work on systems around models — software, hardware, and research — and I keep claims tied to what was actually built or checked.</p>
+          <a class="uni-badge" href="https://www.hcmut.edu.vn/" rel="noopener"
+            aria-label="Ho Chi Minh City University of Technology (Trường Đại học Bách khoa, ĐHQG-HCM)">
+            <span class="uni-logo-frame">
+              <img class="uni-logo" src="images/hcmut-logo.png" alt="Logo Trường Đại học Bách khoa TP.HCM (HCMUT)"
+                width="44" height="44" fetchpriority="high">
+            </span>
+            <span class="uni-text">
+              <span class="uni-vi" lang="vi" translate="no">Trường Đại học Bách khoa · ĐHQG-HCM</span>
+              <span class="uni-en">Faculty of Computer Science &amp; Engineering · HCMUT</span>
+            </span>
+            <span class="uni-arrow" aria-hidden="true">↗</span>
+          </a>
+          <h1 translate="no">Nguyen Dang Gia Dao</h1>
+          <p class="lede">Computer science student at HCMUT. I build systems around models across software, hardware,
+            and research, keeping every claim tied to what was built or verified.</p>
           <div class="hero-actions">
-            <a class="button" href="#work">See the projects</a>
+            <a class="button" href="#work">Explore projects</a>
             <div class="social-row" aria-label="Contact links">
-              <a class="social" href="mailto:dao.nguyenhp2311@hcmut.edu.vn">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.75A1.75 1.75 0 0 1 4.75 4h14.5A1.75 1.75 0 0 1 21 5.75v12.5A1.75 1.75 0 0 1 19.25 20H4.75A1.75 1.75 0 0 1 3 18.25Zm1.75-.25a.25.25 0 0 0-.25.25v.43l7.1 4.44a.75.75 0 0 0 .8 0l7.1-4.44v-.43a.25.25 0 0 0-.25-.25Zm15 3.1-6.52 4.08a2.25 2.25 0 0 1-2.46 0L4.25 8.6v9.65c0 .138.112.25.25.25h14.5a.25.25 0 0 0 .25-.25Z"/></svg>
-                <span>Email</span>
+              <a class="social" href="mailto:giadao23112006@gmail.com">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M3 5.75A1.75 1.75 0 0 1 4.75 4h14.5A1.75 1.75 0 0 1 21 5.75v12.5A1.75 1.75 0 0 1 19.25 20H4.75A1.75 1.75 0 0 1 3 18.25Zm1.75-.25a.25.25 0 0 0-.25.25v.43l7.1 4.44a.75.75 0 0 0 .8 0l7.1-4.44v-.43a.25.25 0 0 0-.25-.25Zm15 3.1-6.52 4.08a2.25 2.25 0 0 1-2.46 0L4.25 8.6v9.65c0 .138.112.25.25.25h14.5a.25.25 0 0 0 .25-.25Z" />
+                </svg>
+                <span>Send email</span>
               </a>
               <a class="social" href="https://github.com/daonguyenhp" rel="noopener">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.477 2 2 6.486 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.093.682-.217.682-.483 0-.237-.009-.866-.013-1.7-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.467-1.11-1.467-.908-.621.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.021C22 6.486 17.523 2 12 2Z"/></svg>
-                <span>GitHub</span>
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M12 2C6.477 2 2 6.486 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.093.682-.217.682-.483 0-.237-.009-.866-.013-1.7-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.467-1.11-1.467-.908-.621.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.021C22 6.486 17.523 2 12 2Z" />
+                </svg>
+                <span>Open GitHub</span>
               </a>
-              <span class="social is-pending" title="LinkedIn not published yet">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.75 3H4.25A1.25 1.25 0 0 0 3 4.25v15.5A1.25 1.25 0 0 0 4.25 21h15.5A1.25 1.25 0 0 0 21 19.75V4.25A1.25 1.25 0 0 0 19.75 3ZM8.34 18.34H5.67V9.67h2.67Zm-1.34-9.8a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1Zm11.34 9.8h-2.67v-4.46c0-1.06-.02-2.43-1.48-2.43-1.48 0-1.71 1.16-1.71 2.35v4.54h-2.67V9.67h2.56v1.18h.04a2.8 2.8 0 0 1 2.52-1.38c2.7 0 3.2 1.78 3.2 4.09Z"/></svg>
-                <span>LinkedIn</span>
-              </span>
+              <a class="social" href="https://www.linkedin.com/in/daonguyenhp/" rel="noopener">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M19.75 3H4.25A1.25 1.25 0 0 0 3 4.25v15.5A1.25 1.25 0 0 0 4.25 21h15.5A1.25 1.25 0 0 0 21 19.75V4.25A1.25 1.25 0 0 0 19.75 3ZM8.34 18.34H5.67V9.67h2.67Zm-1.34-9.8a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1Zm11.34 9.8h-2.67v-4.46c0-1.06-.02-2.43-1.48-2.43-1.48 0-1.71 1.16-1.71 2.35v4.54h-2.67V9.67h2.56v1.18h.04a2.8 2.8 0 0 1 2.52-1.38c2.7 0 3.2 1.78 3.2 4.09Z" />
+                </svg>
+                <span>Open LinkedIn</span>
+              </a>
             </div>
           </div>
           <div class="meta-row">
-            <span>Di An, Binh Duong, Vietnam</span>
+            <span>Ho Chi Minh City, Viet Nam</span>
             <span>Studying · open to open-source collaboration</span>
           </div>
         </div>
-        <nav class="field-jump" id="fields" aria-label="Fields">
-          <a href="#agents"><span class="jump-no">01</span><span class="jump-name">Agent systems</span><span class="jump-count">2</span></a>
-          <a href="#hardware"><span class="jump-no">02</span><span class="jump-name">Hardware and cloud</span><span class="jump-count">1</span></a>
-          <a href="#research"><span class="jump-no">03</span><span class="jump-name">Research</span><span class="jump-count">1</span></a>
-          <a href="#products"><span class="jump-no">04</span><span class="jump-name">Products and applied ML</span><span class="jump-count">3</span></a>
+        <nav class="field-jump" id="fields" aria-label="Project fields">
+          <a href="#ai-software"><span class="jump-no">01</span><span class="jump-name">AI systems and
+              software</span></a>
+          <a href="#embodied-ai"><span class="jump-no">02</span><span class="jump-name">Embodied AI and
+              robotics</span></a>
+          <a href="#research"><span class="jump-no">03</span><span class="jump-name">AI research and vision</span></a>
         </nav>
       </div>
     </section>
@@ -100,7 +168,9 @@
         <header class="section-head">
           <p class="eyebrow">Selected work</p>
           <h2>Projects</h2>
-          <p class="section-lead">Seven projects in four fields. Every card opens a write-up. The tags only narrow this list.</p>
+          <p class="section-lead">Grouped into three fields across AI software, hardware integration, and research.
+            Every
+            card opens a technical write-up.</p>
         </header>
 
         <div class="filter-bar">
@@ -108,99 +178,456 @@
             <button type="button" data-filter="all" aria-pressed="true">All</button>
             <button type="button" data-filter="software" aria-pressed="false">Software</button>
             <button type="button" data-filter="ai" aria-pressed="false">AI</button>
-            <button type="button" data-filter="data" aria-pressed="false">Data</button>
             <button type="button" data-filter="robot" aria-pressed="false">Robot</button>
+            <button type="button" data-filter="award" aria-pressed="false">Award-winning</button>
           </div>
-          <p class="filter-status" data-filter-status></p>
         </div>
 
-        <div class="field-block" id="agents">
+        <section class="filter-empty" data-filter-empty hidden aria-labelledby="filter-empty-title">
+          <h3 id="filter-empty-title">No projects match this tag yet</h3>
+          <p>Reset the active tag to view all project write-ups across the three fields.</p>
+          <button type="button" class="button-secondary" data-clear-filters>Show all projects</button>
+        </section>
+
+        <div class="field-block" id="ai-software">
           <header class="field-head">
-            <p class="eyebrow">Field 01 · 2 projects</p>
-            <h3 class="field-title">Agent systems</h3>
-            <p class="field-note">What the model decided, written down so it can be replayed.</p>
+            <p class="eyebrow">Field 01</p>
+            <h3 class="field-title">AI systems and software</h3>
+            <p class="field-note">Trace debuggers and LLM applications connected to business data.</p>
           </header>
           <div class="cards two">
-            <a class="card agents" href="work/celesnity.html" data-tags="software ai">
-              <div class="card-top"><span>Sep 2026</span></div>
-              <h3>Celesnity</h3>
-              <p>An agent runtime. The API returns at once, a worker runs the loop, and every change is an event in SQLite. Tools go only through MCP.</p>
-              <ul class="tags" aria-label="Tags"><li class="tag">Software</li><li class="tag">AI</li></ul>
-              <div class="card-foot"><span>Python · FastAPI · SQLite · MCP</span><span>Read</span></div>
-            </a>
-            <a class="card agents" href="work/omnitrace.html" data-tags="software ai data">
+            <a class="card agents" href="work/omnitrace.html" data-tags="software ai">
               <div class="card-top"><span>Live demo</span><span>Render</span></div>
-              <h3>OmniTrace</h3>
-              <p>A debugger for one failed agent run. Drop an OTLP JSON file, isolate the smallest failing piece, then fork a cleaned thread.</p>
-              <ul class="tags" aria-label="Tags"><li class="tag">Software</li><li class="tag">AI</li><li class="tag">Data</li></ul>
-              <div class="card-foot"><span>Python · OpenTelemetry · Docker</span><span>Read</span></div>
+              <h3 translate="no">OmniTrace</h3>
+              <p>A debugger for one failed agent run. Drop an OTLP JSON file, isolate the smallest failing piece, then
+                fork a cleaned thread.</p>
+              <ul class="tags" aria-label="Tags">
+                <li class="tag">Software</li>
+                <li class="tag">AI</li>
+              </ul>
+              <div class="card-foot"><span>Python · OpenTelemetry · Docker</span><span class="card-action">Read case
+                  study →</span></div>
             </a>
+            <article class="card product" data-tags="software ai award">
+              <div class="card-top"><span>May 2025 · Team</span><span class="card-award-pill">★ Third Prize · AI in
+                  Business</span></div>
+              <h3 translate="no"><a class="card-title-link" href="work/iceam.html">ICEAM</a></h3>
+              <p>A chatbot for small shops that reads inventory from Excel and queries an LLM through OpenRouter. Won
+                Third Prize in the AI in Business competition.</p>
+              <ul class="tags" aria-label="Tags">
+                <li class="tag tag-award">★ AI in Business</li>
+                <li class="tag">Award-winning</li>
+                <li class="tag">Software</li>
+                <li class="tag">AI</li>
+              </ul>
+              <div class="card-foot">
+                <a class="card-sublink" href="#award-iceam">View competition proof ↓</a>
+                <a class="card-action" href="work/iceam.html">Read case study →</a>
+              </div>
+            </article>
           </div>
         </div>
 
-        <div class="field-block" id="hardware">
+        <div class="field-block" id="embodied-ai">
           <header class="field-head">
-            <p class="eyebrow">Field 02 · 1 project</p>
-            <h3 class="field-title">Hardware and cloud</h3>
-            <p class="field-note">The app holds the schedule. The ESP32 opens the drawer.</p>
+            <p class="eyebrow">Field 02</p>
+            <h3 class="field-title">Embodied AI and robotics</h3>
+            <p class="field-note">Autonomous robot navigation stacks in C++ / ROS 2 and physical microcontroller
+              actuators.</p>
           </header>
-          <div class="cards">
-            <a class="card hardware" href="work/medai.html" data-tags="software ai robot">
-              <div class="card-top"><span>May 2026</span></div>
-              <h3>MedAI Cabinet</h3>
-              <p>A medicine cabinet: the schedule on the web, the drawer on an ESP32. It needs AWS. It does not diagnose, and there is no household count.</p>
-              <ul class="tags" aria-label="Tags"><li class="tag">Software</li><li class="tag">AI</li><li class="tag">Robot</li></ul>
-              <div class="card-foot"><span>React · FastAPI · AWS IoT · ESP32</span><span>Read</span></div>
+          <div class="cards two">
+            <a class="card hardware" href="work/mars.html" data-tags="software ai robot">
+              <div class="card-top"><span>2026 · Research</span><span>ROS 2 &amp; C++17</span></div>
+              <h3 translate="no">MARS Modular</h3>
+              <p>Autonomous robot navigation stack using sequences of line-segment bundles to escape blind-alley regions
+                with limited sensor range.</p>
+              <ul class="tags" aria-label="Tags">
+                <li class="tag">Robot</li>
+                <li class="tag">AI</li>
+                <li class="tag">Software</li>
+              </ul>
+              <div class="card-foot"><span>C++17 · ROS 2 · Gazebo / RViz</span><span class="card-action">Read case
+                  study →</span></div>
             </a>
+            <article class="card hardware" data-tags="software ai robot award">
+              <div class="card-top"><span>May 2026 · IoT &amp; Servo</span><span class="card-award-pill">★ Top 4 · Neo
+                  League S2</span></div>
+              <h3 translate="no"><a class="card-title-link" href="work/medai.html">MedAI Cabinet</a></h3>
+              <p>Smart 3-bay medicine cabinet connecting a React dashboard and AWS IoT to an ESP32 dispenser.</p>
+              <ul class="tags" aria-label="Tags">
+                <li class="tag tag-award">★ Neo League Season 2</li>
+                <li class="tag">Award-winning</li>
+                <li class="tag">Robot</li>
+                <li class="tag">AI</li>
+                <li class="tag">Software</li>
+              </ul>
+              <div class="card-foot">
+                <a class="card-sublink" href="#award-neoleague">View competition proof ↓</a>
+                <a class="card-action" href="work/medai.html">Read case study →</a>
+              </div>
+            </article>
           </div>
         </div>
 
         <div class="field-block" id="research">
           <header class="field-head">
-            <p class="eyebrow">Field 03 · 1 project</p>
-            <h3 class="field-title">Research</h3>
-            <p class="field-note">A report dated 19 Sep 2026. Figures are targets, not measurements.</p>
+            <p class="eyebrow">Field 03</p>
+            <h3 class="field-title">AI research and computer vision</h3>
+            <p class="field-note">Ongoing theoretical and empirical research in Generalized Category Discovery, autonomous code repair agents, and mathematical vision models.</p>
           </header>
-          <div class="cards">
-            <a class="card research" href="work/flood.html" data-tags="ai data">
-              <div class="card-top"><span>19 Sep 2026</span><span>Report</span></div>
-              <h3>Flooding in HCMC</h3>
-              <p>Measure floodwater without contact, then talk about a forecast. Not a camera pole, and not a journal paper.</p>
-              <ul class="tags" aria-label="Tags"><li class="tag">AI</li><li class="tag">Data</li></ul>
-              <div class="card-foot"><span>Report · not a built system</span><span>Read</span></div>
+          <div class="cards three">
+            <article class="card research card-wip" data-tags="ai" aria-disabled="true">
+              <div class="card-top">
+                <span>2026 · Research</span>
+                <span class="card-wip-pill"><span class="wip-dot" aria-hidden="true"></span>In Progress</span>
+              </div>
+              <h3 translate="no">IsoSpec-GCD: Isometric Spectral-Submodular Dictionary &amp; Fixed-Budget Residual Swapping for GCD</h3>
+              <p>Generalized Category Discovery via isometric spectral-submodular dictionary construction and fixed-budget residual swapping.</p>
+              <ul class="tags" aria-label="Tags">
+                <li class="tag tag-wip">◷ Ongoing Research</li>
+                <li class="tag">AI</li>
+              </ul>
+              <div class="card-foot">
+                <span>Spectral Learning · Submodular Optimization · GCD</span>
+                <span class="card-status-note">Manuscript in preparation</span>
+              </div>
+            </article>
+
+            <article class="card research card-wip" data-tags="software ai" aria-disabled="true">
+              <div class="card-top">
+                <span>2026 · Research</span>
+                <span class="card-wip-pill"><span class="wip-dot" aria-hidden="true"></span>In Progress</span>
+              </div>
+              <h3 translate="no">AutoCodeRover Research</h3>
+              <p>Empirical study and extension of autonomous program improvement and AST-aware code search for automated issue resolution.</p>
+              <ul class="tags" aria-label="Tags">
+                <li class="tag tag-wip">◷ Ongoing Research</li>
+                <li class="tag">AI</li>
+                <li class="tag">Software</li>
+              </ul>
+              <div class="card-foot">
+                <span>Autonomous SWE Agents · Program Repair</span>
+                <span class="card-status-note">Work in progress</span>
+              </div>
+            </article>
+
+            <a class="card product" href="work/pca.html" data-tags="software ai">
+              <div class="card-top"><span>2 Jun 2025</span><span>Team</span></div>
+              <h3>PCA faces</h3>
+              <p>Eigenfaces from a webcam. Principal component analysis is implemented directly in the project rather
+                than wrapping a recognizer API.</p>
+              <ul class="tags" aria-label="Tags">
+                <li class="tag">Software</li>
+                <li class="tag">AI</li>
+              </ul>
+              <div class="card-foot"><span>Python · OpenCV · PCA</span><span class="card-action">Read case study
+                  →</span></div>
             </a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="field-block" id="products">
-          <header class="field-head">
-            <p class="eyebrow">Field 04 · 3 projects</p>
-            <h3 class="field-title">Products and applied ML</h3>
-            <p class="field-note">Something with an interface. Team work is labeled Team.</p>
-          </header>
-          <div class="cards three">
-            <a class="card product" href="work/icram.html" data-tags="software">
-              <div class="card-top"><span>13 Jan – 21 Mar 2026</span></div>
-              <h3>ICRAM</h3>
-              <p>A focus timer: Pomodoro, a stopwatch, and music on the page. It needs a server. There is no public live app.</p>
-              <ul class="tags" aria-label="Tags"><li class="tag">Software</li></ul>
-              <div class="card-foot"><span>Express · Pug · MongoDB</span><span>Read</span></div>
-            </a>
-            <a class="card product" href="work/iceam.html" data-tags="software ai">
-              <div class="card-top"><span>May 2025</span><span>Team</span></div>
-              <h3>ICEAM</h3>
-              <p>A chatbot for small shops. It reads stock from Excel and calls a model. This was a course report.</p>
-              <ul class="tags" aria-label="Tags"><li class="tag">Software</li><li class="tag">AI</li></ul>
-              <div class="card-foot"><span>Node.js · Excel · LLM API</span><span>Read</span></div>
-            </a>
-            <a class="card product" href="work/pca.html" data-tags="software ai data">
-              <div class="card-top"><span>2 Jun 2025</span><span>Team</span></div>
-              <h3>PCA faces</h3>
-              <p>Eigenfaces from a webcam. PCA is written in the project. It does not wrap a ready-made recognizer.</p>
-              <ul class="tags" aria-label="Tags"><li class="tag">Software</li><li class="tag">AI</li><li class="tag">Data</li></ul>
-              <div class="card-foot"><span>Python · OpenCV · PCA</span><span>Read</span></div>
-            </a>
+    <section class="section" id="awards">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Competitions and recognition</p>
+          <h2>Awards and certificates</h2>
+          <p class="section-lead">Verified competition prizes, project demonstrations, and certificates with supporting
+            evidence.</p>
+        </header>
+
+        <div class="award-list">
+          <article class="award-compact" id="award-vaio-2025">
+            <div class="award-main">
+              <div class="panel-top">
+                <span class="panel-kind">★ 4th Prize (National) &amp; 2nd Prize (Regional)</span>
+                <span>2025 · National AI Olympiad</span>
+              </div>
+              <div class="award-title-row">
+                <span class="org-logo-box"><img class="org-logo" src="images/organizers/vaio-logo.png"
+                    alt="VAIP · Olympic AI Việt Nam" width="40" height="40" loading="lazy"></span>
+                <div>
+                  <h3>Vietnamese Student Artificial Intelligence Olympics 2025</h3>
+                  <p class="award-org">Organized by VAIP (Hội Tin học Việt Nam) &amp; MOET · Team SwordFish</p>
+                </div>
+              </div>
+              <p class="award-meta">Won 4th Prize at the National Finals and 2nd Prize at the Regional Round.</p>
+            </div>
+
+            <div class="award-thumbs" aria-label="Vietnamese Student AI Olympics 2025 proof thumbnails">
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Certificate / Proof 01"
+                data-proof-title="4th Prize (National) &amp; 2nd Prize (Regional) · Vietnam Student AI Olympics 2025"
+                data-proof-src="images/awards/vaio-2025-certificate.jpg"
+                data-proof-caption="Official certificate for Team SwordFish (HCMUT) at the National Finals of the Vietnamese Student Artificial Intelligence Olympics 2025.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/vaio-2025-certificate.jpg"
+                    alt="Certificate · Vietnamese Student Artificial Intelligence Olympics 2025" width="240"
+                    height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">Certificate ↗</span>
+              </button>
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Event Photo / Proof 02"
+                data-proof-title="Vietnamese Student Artificial Intelligence Olympics 2025"
+                data-proof-src="images/awards/vaio-2025-photo.jpg"
+                data-proof-caption="Event photo from the Vietnamese Student Artificial Intelligence Olympics 2025.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/vaio-2025-photo.jpg"
+                    alt="Event photo · Vietnamese Student Artificial Intelligence Olympics 2025" width="240"
+                    height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">Event photo ↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="award-compact" id="award-vaio-2026">
+            <div class="award-main">
+              <div class="panel-top">
+                <span class="panel-kind">★ 3rd Prize (Regional)</span>
+                <span>2026 · National AI Olympiad</span>
+              </div>
+              <div class="award-title-row">
+                <span class="org-logo-box"><img class="org-logo" src="images/organizers/vaio-logo.png"
+                    alt="VAIP · Olympic AI Việt Nam" width="40" height="40" loading="lazy"></span>
+                <div>
+                  <h3>Vietnamese Student Artificial Intelligence Olympics 2026</h3>
+                  <p class="award-org">Organized by VAIP (Hội Tin học Việt Nam)</p>
+                </div>
+              </div>
+              <p class="award-meta">Won 3rd Prize at the Regional Round of the Vietnamese Student Artificial
+                Intelligence Olympics 2026.</p>
+            </div>
+
+            <div class="award-thumbs" aria-label="Vietnamese Student AI Olympics 2026 proof thumbnails">
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Event Photo / Proof 01"
+                data-proof-title="Vietnamese Student Artificial Intelligence Olympics 2026"
+                data-proof-src="images/awards/vaio-2026-photo.jpg"
+                data-proof-caption="Event photo from the Vietnamese Student Artificial Intelligence Olympics 2026.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/vaio-2026-photo.jpg"
+                    alt="Event photo · Vietnamese Student Artificial Intelligence Olympics 2026" width="240"
+                    height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">Event photo ↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="award-compact" id="award-iceam">
+            <div class="award-main">
+              <div class="panel-top">
+                <span class="panel-kind">★ Third Prize (Giải Ba · Quý quân Bảng B)</span>
+                <span>May 2025 · Team entry</span>
+              </div>
+              <div class="award-title-row">
+                <span class="org-logo-box"><img class="org-logo" src="images/organizers/uel-logo.png"
+                    alt="UEL · ĐHQG-HCM" width="40" height="40" loading="lazy"></span>
+                <div>
+                  <h3>AI in Business Competition</h3>
+                  <p class="award-org">Organized by University of Economics and Law (UEL · VNU-HCM)</p>
+                </div>
+              </div>
+              <p class="award-meta">Project: <a href="work/iceam.html" translate="no">ICEAM</a> · <a
+                  class="award-case-link" href="work/iceam.html">Read ICEAM case study →</a></p>
+            </div>
+
+            <div class="award-thumbs" aria-label="AI in Business proof thumbnails">
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Certificate / Proof 01"
+                data-proof-title="Third Prize Certificate · AI in Business"
+                data-proof-src="images/awards/ai-in-business-certificate.png"
+                data-proof-caption="Official Third Prize certificate awarded in the AI in Business competition.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/ai-in-business-certificate.png" alt="Third Prize Certificate · AI in Business"
+                    width="240" height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">Certificate ↗</span>
+              </button>
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Event Photo / Proof 02"
+                data-proof-title="Team Presentation &amp; Award Ceremony"
+                data-proof-src="images/awards/ai-in-business-ceremony.jpg"
+                data-proof-caption="Presenting the ICEAM shop assistant and receiving Third Prize with the team.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/ai-in-business-ceremony.jpg" alt="Team Presentation &amp; Award Ceremony"
+                    width="240" height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">Award ceremony ↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="award-compact" id="award-kms">
+            <div class="award-main">
+              <div class="panel-top">
+                <span class="panel-kind">★ Top 4 Finalist</span>
+                <span>2026 · Hackathon</span>
+              </div>
+              <div class="award-title-row">
+                <span class="org-logo-box org-logo-box-wide"><img class="org-logo" src="images/organizers/kms-logo.png"
+                    alt="KMS Technology" width="72" height="32" loading="lazy"></span>
+                <div>
+                  <h3 translate="no">KMS Hackathon 2026</h3>
+                  <p class="award-org">Organized by CSE · HCMUT &amp; KMS Technology</p>
+                </div>
+              </div>
+              <p class="award-meta">Ranked Top 4 overall in the software engineering and AI hackathon organized by KMS
+                Technology.</p>
+            </div>
+
+            <div class="award-thumbs" aria-label="KMS Hackathon 2026 proof thumbnails">
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Certificate / Proof 01"
+                data-proof-title="Top 4 · KMS Hackathon 2026"
+                data-proof-src="images/awards/kms-hackathon-certificate.jpg"
+                data-proof-caption="Official Top 4 recognition in KMS Hackathon 2026.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/kms-hackathon-certificate.jpg" alt="Certificate · KMS Hackathon 2026"
+                    width="240" height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">Certificate ↗</span>
+              </button>
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Event Photo / Proof 02"
+                data-proof-title="KMS Hackathon 2026 Finals" data-proof-src="images/awards/kms-hackathon-photo.jpg"
+                data-proof-caption="Competing and pitching in the Top 4 finals at KMS Hackathon 2026.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/kms-hackathon-photo.jpg" alt="Event photo · KMS Hackathon 2026" width="240"
+                    height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">Event photo ↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="award-compact" id="award-neoleague">
+            <div class="award-main">
+              <div class="panel-top">
+                <span class="panel-kind">★ Top 4 · Consolation Prize</span>
+                <span>Season 2 · Competition</span>
+              </div>
+              <div class="award-title-row">
+                <span class="org-logo-box"><img class="org-logo" src="images/organizers/neoleague-logo.png"
+                    alt="Neo League Season 2" width="40" height="40" loading="lazy"></span>
+                <div>
+                  <h3 translate="no">Neo League Season 2</h3>
+                  <p class="award-org">Innovation Humanity Challenge · Neo League</p>
+                </div>
+              </div>
+              <p class="award-meta">Project: <a href="work/medai.html" translate="no">MedAI Cabinet</a> · <a
+                  class="award-case-link" href="work/medai.html">Read MedAI Cabinet case study →</a></p>
+            </div>
+
+            <div class="award-thumbs" aria-label="Neo League Season 2 proof thumbnails">
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Certificate / Proof 01"
+                data-proof-title="Top 4 Consolation · Neo League Season 2"
+                data-proof-src="images/awards/neo-league-certificate.jpg"
+                data-proof-caption="Top 4 Consolation Prize certificate in Neo League Season 2.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/neo-league-certificate.jpg" alt="Certificate · Neo League Season 2"
+                    width="240" height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">Certificate ↗</span>
+              </button>
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Event Photo / Proof 02"
+                data-proof-title="Neo League Season 2" data-proof-src="images/awards/neo-league-photo.jpg"
+                data-proof-caption="Event photo from Neo League Season 2.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/neo-league-photo.jpg" alt="Event photo · Neo League Season 2" width="240"
+                    height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">Event photo ↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="award-compact" id="award-netcompany">
+            <div class="award-main">
+              <div class="panel-top">
+                <span class="panel-kind">★ Top 11 Finalist</span>
+                <span>2026 · Case Challenge</span>
+              </div>
+              <div class="award-title-row">
+                <span class="org-logo-box org-logo-box-wide"><img class="org-logo"
+                    src="images/organizers/netcompany-logo.png" alt="Netcompany &amp; Code Mely" width="76" height="32"
+                    loading="lazy"></span>
+                <div>
+                  <h3 translate="no">Netcompany IT Consultant Challenge 2026</h3>
+                  <p class="award-org">Organized by Netcompany &amp; Code Mely</p>
+                </div>
+              </div>
+              <p class="award-meta">Selected among the Top 11 teams in the Netcompany IT Consultant Challenge 2026.</p>
+            </div>
+
+            <div class="award-thumbs" aria-label="Netcompany IT Consultant Challenge 2026 proof thumbnails">
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Certificate / Proof 01"
+                data-proof-title="Top 11 · Netcompany IT Consultant Challenge 2026"
+                data-proof-src="images/awards/netcompany-certificate.jpg"
+                data-proof-caption="Top 11 recognition in the Netcompany IT Consultant Challenge 2026.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/netcompany-certificate.jpg"
+                    alt="Certificate · Netcompany IT Consultant Challenge 2026" width="240" height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">Certificate ↗</span>
+              </button>
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Event Photo / Proof 02"
+                data-proof-title="Netcompany IT Consultant Challenge 2026"
+                data-proof-src="images/awards/netcompany-photo.jpg"
+                data-proof-caption="Participating in the Netcompany IT Consultant Challenge 2026.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/netcompany-photo.jpg"
+                    alt="Event photo · Netcompany IT Consultant Challenge 2026" width="240" height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">Event photo ↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="award-compact" id="award-sv5t">
+            <div class="award-main">
+              <div class="panel-top">
+                <span class="panel-kind">★ City Level &amp; VNU-HCM Level</span>
+                <span>2025–2026</span>
+              </div>
+              <div class="award-title-row">
+                <span class="org-logo-box"><img class="org-logo" src="images/organizers/vnuhcm-logo.svg"
+                    alt="ĐHQG-HCM · VNU-HCM" width="40" height="40" loading="lazy"></span>
+                <div>
+                  <h3>Danh hiệu “Sinh viên 5 Tốt”</h3>
+                  <p class="award-org">VNU-HCM &amp; Ho Chi Minh City Student Association</p>
+                </div>
+              </div>
+              <p class="award-meta">2026: Cấp Thành phố &amp; Cấp ĐHQG-HCM · 2025: Cấp ĐHQG-HCM.</p>
+            </div>
+
+            <div class="award-thumbs" aria-label="Sinh viên 5 Tốt proof thumbnails">
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Certificate / City Level 2026"
+                data-proof-title="Sinh viên 5 Tốt Cấp Thành phố · 2026"
+                data-proof-src="images/awards/sv5t-2026-city.jpg"
+                data-proof-caption="Chứng nhận Sinh viên 5 Tốt Cấp Thành phố năm 2026.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/sv5t-2026-city.jpg" alt="Sinh viên 5 Tốt Cấp Thành phố 2026" width="240"
+                    height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">City 2026 ↗</span>
+              </button>
+              <button type="button" class="proof-thumb" data-proof-open data-proof-tag="Certificate / VNU-HCM Level"
+                data-proof-title="Sinh viên 5 Tốt Cấp ĐHQG-HCM" data-proof-src="images/awards/sv5t-2026-vnuhcm.jpg"
+                data-proof-caption="Chứng nhận Sinh viên 5 Tốt Cấp ĐHQG-HCM.">
+                <span class="proof-thumb-box">
+                  <img src="images/awards/sv5t-2026-vnuhcm.jpg" alt="Sinh viên 5 Tốt Cấp ĐHQG-HCM" width="240"
+                    height="150" loading="lazy">
+                </span>
+                <span class="proof-thumb-label">VNU 2026 ↗</span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="award-more-bar">
+          <div class="award-more-info">
+            <span class="award-more-title">Other achievements &amp; certificates</span>
+            <span class="award-more-sub">Giấy khen Hiệu trưởng, Sinh viên tiêu biểu CSE, Thanh niên tiên tiến làm theo
+              lời Bác, Giải Ba viết về TP.HCM, The Next Analyst Challenge</span>
           </div>
+          <button type="button" class="button" data-awards-modal-open>View other achievements →</button>
         </div>
       </div>
     </section>
@@ -209,35 +636,71 @@
       <div class="wrap">
         <header class="section-head">
           <p class="eyebrow">Background</p>
-          <h2>Experience</h2>
-          <p class="section-lead">Education is listed. Jobs and internships stay empty until there is a real role to name.</p>
+          <h2>Experience and education</h2>
+          <p class="section-lead">Academic record at HCMUT and applied robotics research experience.</p>
         </header>
 
         <div class="panel-grid">
           <article class="panel">
             <div class="panel-top">
-              <span class="panel-kind">Education</span>
-              <span>Studying</span>
+              <span class="panel-kind">Education · GPA: 3.8 / 4.0</span>
+              <span>2024 – 2027</span>
             </div>
-            <h3>Computer Science</h3>
-            <p class="panel-org"><a href="https://www.hcmut.edu.vn/" rel="noopener">Ho Chi Minh City University of Technology (HCMUT)</a></p>
-            <p>Faculty of Computer Science and Engineering. Focus: deep learning, computer vision, and language models.</p>
+            <div class="edu-head">
+              <span class="org-logo-box"><img class="org-logo" src="images/hcmut-logo.png" alt="HCMUT" width="40"
+                  height="40" loading="lazy"></span>
+              <div>
+                <h3>Bachelor of Computer Science</h3>
+                <p class="panel-org"><a href="https://www.hcmut.edu.vn/" rel="noopener">Ho Chi Minh City University of
+                    Technology (HCMUT)</a></p>
+                <p class="panel-org-vi" lang="vi" translate="no">Trường Đại học Bách khoa · ĐHQG-HCM</p>
+              </div>
+            </div>
+            <p><strong>Major:</strong> Computer Science · <strong>Specialization:</strong> Artificial Intelligence
+              (Faculty of Computer Science and Engineering). Focus areas: deep learning, computer vision, language
+              models, and autonomous systems.</p>
+            <div class="edu-cert-row">
+              <div class="edu-cert-info">
+                <span class="edu-cert-tag">English Proficiency</span>
+                <span class="edu-cert-name">IELTS Academic Certificate</span>
+              </div>
+              <button type="button" class="button-secondary edu-cert-btn" data-proof-open
+                data-proof-tag="Language Certificate · IELTS" data-proof-title="IELTS Academic Certificate"
+                data-proof-src="images/awards/ielts-certificate.jpg"
+                data-proof-caption="Official IELTS Academic Test Report Form.">View IELTS certificate ↗</button>
+            </div>
             <div class="panel-foot">
-              <a href="#work">See projects</a>
-              <a href="https://github.com/daonguyenhp" rel="noopener"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.477 2 2 6.486 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.093.682-.217.682-.483 0-.237-.009-.866-.013-1.7-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.467-1.11-1.467-.908-.621.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.021C22 6.486 17.523 2 12 2Z"/></svg> GitHub</a>
+              <a href="#work">Explore projects →</a>
+              <a href="https://www.linkedin.com/in/daonguyenhp/" rel="noopener">View LinkedIn →</a>
             </div>
           </article>
 
-          <article class="panel is-empty">
+          <article class="panel">
             <div class="panel-top">
-              <span class="panel-kind">Work</span>
-              <span>Open slot</span>
+              <span class="panel-kind">Work · Part-time · Hybrid</span>
+              <span>Apr 2026 – Present</span>
             </div>
-            <h3>Internship or job</h3>
-            <p>Role, organization, dates, and what was done — added when real.</p>
+            <div class="edu-head">
+              <span class="org-logo-box org-logo-box-wide"><img class="org-logo" src="images/organizers/ivs-logo.png"
+                  alt="IVS Joint Stock Company" width="76" height="32" loading="lazy"></span>
+              <div>
+                <h3>Research Collaborator</h3>
+                <p class="panel-org"><a href="https://indivisys.vn/" rel="noopener">IVS Joint Stock Company (Individual
+                    Systems) ↗</a></p>
+                <p class="panel-org-vi">Ho Chi Minh City University of Technology (HCMUT) · Hybrid</p>
+              </div>
+            </div>
+            <p>Developed a robot navigation system using ROS 2 and C++ to calculate the shortest path and applied
+              Computer Vision to detect potholes and obstacles.</p>
+            <ul class="skill-chips" translate="no">
+              <li>ROS 2</li>
+              <li>C++</li>
+              <li>Computer Vision</li>
+              <li>Path Planning</li>
+            </ul>
             <div class="panel-foot">
-              <span class="foot-muted">Waiting for a real entry</span>
-              <a href="mailto:dao.nguyenhp2311@hcmut.edu.vn?subject=Portfolio%20work%20entry">Send a role</a>
+              <a href="https://indivisys.vn/" rel="noopener">Visit company website ↗</a>
+              <a href="#embodied-ai">View robotics work →</a>
             </div>
           </article>
         </div>
@@ -248,33 +711,77 @@
       <div class="wrap">
         <header class="section-head">
           <p class="eyebrow">Campus and community</p>
-          <h2>Leadership and extracurricular</h2>
-          <p class="section-lead">Club roles, event work, and volunteer work go here when the name, role, and year are real.</p>
+          <h2>Leadership, volunteering and media</h2>
+          <p class="section-lead">Active student leadership, social service campaigns, and faculty media operations at
+            the Faculty of Computer Science and Engineering (HCMUT).</p>
         </header>
 
         <div class="panel-grid">
-          <article class="panel is-empty">
+          <article class="panel">
             <div class="panel-top">
-              <span class="panel-kind">Leadership</span>
-              <span>Open slot</span>
+              <span class="panel-kind">Youth Union &amp; Media</span>
+              <span>2024 – Present</span>
             </div>
-            <h3>Club or team role</h3>
-            <p>Role · organization · year · one line on what you ran.</p>
+            <div class="edu-head">
+              <span class="org-logo-box org-logo-box-wide"><img class="org-logo"
+                  src="images/organizers/cse-multimedia-logo.svg" alt="CSE Multimedia" width="76" height="36"
+                  loading="lazy"></span>
+              <div>
+                <h3>Ho Chi Minh Communist Youth Union · Faculty of CSE</h3>
+                <p class="panel-org"><a href="https://www.facebook.com/BKCSE.Multimedia?locale=vi_VN" rel="noopener">CSE
+                    Multimedia (Ban Truyền thông Khoa KH&amp;KT Máy tính) ↗</a></p>
+              </div>
+            </div>
+            <ul class="role-list">
+              <li><strong>Executive Committee Member</strong> — Ho Chi Minh Communist Youth Union, Faculty of Computer
+                Science and Engineering (HCMUT).</li>
+              <li><strong>Office Team &amp; “Excellent Student” Working Group</strong> — Coordinated administrative
+                operations, media communications, and student movement assessments at the Faculty of CSE.</li>
+            </ul>
+            <div class="edu-cert-row">
+              <div class="edu-cert-info">
+                <span class="edu-cert-tag">Commendation · 2025 – 2026</span>
+                <span class="edu-cert-name">Giấy khen Hiệu trưởng · Xuất sắc công tác Đoàn – Hội</span>
+              </div>
+              <button type="button" class="button-secondary edu-cert-btn" data-proof-open
+                data-proof-tag="Rector's Commendation · Youth Union 2025–2026"
+                data-proof-title="Giấy khen Hiệu trưởng · Thành tích xuất sắc công tác Đoàn – Hội 2025 – 2026"
+                data-proof-src="images/awards/doanhoi.jpg"
+                data-proof-caption="Giấy khen của Hiệu trưởng Trường Đại học Bách khoa – ĐHQG-HCM vì đã có thành tích xuất sắc trong công tác Đoàn – Hội và phong trào thanh niên – sinh viên năm học 2025 – 2026.">View certificate ↗</button>
+            </div>
             <div class="panel-foot">
-              <span class="foot-muted">Waiting for a real entry</span>
-              <a href="mailto:dao.nguyenhp2311@hcmut.edu.vn?subject=Portfolio%20leadership%20entry">Send a role</a>
+              <a href="https://www.facebook.com/BKCSE.Multimedia?locale=vi_VN" rel="noopener">Visit CSE Multimedia
+                fanpage ↗</a>
+              <a href="#award-sv5t">View Sinh viên 5 Tốt →</a>
             </div>
           </article>
-          <article class="panel is-empty">
+
+          <article class="panel">
             <div class="panel-top">
-              <span class="panel-kind">Extracurricular</span>
-              <span>Open slot</span>
+              <span class="panel-kind">Event Leadership &amp; Social Services</span>
+              <span>2024 – 2026</span>
             </div>
-            <h3>Activity or volunteer work</h3>
-            <p>Activity · group · year · what you did.</p>
+            <div class="edu-head">
+              <span class="org-logo-box"><img class="org-logo" src="images/hcmut-logo.png" alt="HCMUT" width="40"
+                  height="40" loading="lazy"></span>
+              <div>
+                <h3>Event Leader &amp; Community Volunteer</h3>
+                <p class="panel-org">Faculty of Computer Science and Engineering · HCMUT</p>
+              </div>
+            </div>
+            <ul class="role-list">
+              <li><strong>Head of Student Tet Greetings Committee (Jan – Feb 2026)</strong> — Managed and coordinated a
+                team of volunteers to plan, prepare, and deliver Lunar New Year gifts and greetings to students staying
+                in dormitories or away from home.</li>
+              <li><strong>Green Summer Campaign Volunteer (Jun – Jul 2025)</strong> — Participated in the annual Green
+                Summer Campaign (Chiến dịch Mùa hè xanh) organized by the Faculty of CSE, supporting community service
+                and local development.</li>
+              <li><strong>Leader · UpRace × HCMUT Charity Run (2025) &amp; eCSE Cup (2024)</strong> — Led the “Every
+                Step Matters” charity run and directed the eCSE Cup 2025 esports tournament across the faculty.</li>
+            </ul>
             <div class="panel-foot">
-              <span class="foot-muted">Waiting for a real entry</span>
-              <a href="mailto:dao.nguyenhp2311@hcmut.edu.vn?subject=Portfolio%20extracurricular%20entry">Send an activity</a>
+              <span class="foot-muted">Social Services · Project Management</span>
+              <a href="#contact">Connect for collaboration →</a>
             </div>
           </article>
         </div>
@@ -285,85 +792,86 @@
       <div class="wrap">
         <header class="section-head">
           <p class="eyebrow">Capabilities</p>
-          <h2>Skills</h2>
-          <p class="section-lead">Grouped from tools in the projects. Each card jumps to the matching field.</p>
+          <h2>Technical skills</h2>
+          <p class="section-lead">Core programming languages, computer science foundations, and development tools used across my coursework and projects.</p>
         </header>
 
         <div class="panel-grid">
           <a class="panel" href="#work">
             <div class="panel-top">
-              <span class="panel-kind">Languages</span>
-              <span>01–04</span>
-            </div>
-            <p class="panel-title">Used across the work</p>
-            <ul class="skill-chips">
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>Java</li>
-              <li>C++</li>
-            </ul>
-            <div class="panel-foot">
-              <span class="foot-muted">All projects</span>
-              <span class="foot-action">Open projects</span>
-            </div>
-          </a>
-          <a class="panel" href="#agents">
-            <div class="panel-top">
-              <span class="panel-kind">AI and data</span>
+              <span class="panel-kind">Languages &amp; Core CS</span>
               <span>01</span>
             </div>
-            <p class="panel-title">Agents and traces</p>
-            <ul class="skill-chips">
-              <li>Deep learning</li>
+            <p class="panel-title">Programming languages &amp; concepts</p>
+            <ul class="skill-chips" translate="no">
+              <li>C++</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>HTML / CSS</li>
+              <li>Object-Oriented Programming (OOP)</li>
+              <li>Data Structures &amp; Algorithms</li>
+            </ul>
+            <div class="panel-foot">
+              <span class="foot-muted">Foundations</span>
+              <span class="foot-action">Browse all projects →</span>
+            </div>
+          </a>
+
+          <a class="panel" href="#embodied-ai">
+            <div class="panel-top">
+              <span class="panel-kind">Robotics &amp; Developer Tools</span>
+              <span>02</span>
+            </div>
+            <p class="panel-title">Build systems, simulation &amp; environments</p>
+            <ul class="skill-chips" translate="no">
+              <li>ROS 2</li>
+              <li>Linux</li>
+              <li>CMake</li>
+              <li>Git</li>
+              <li>Docker Compose</li>
+              <li>Gazebo / RViz</li>
+              <li>ESP32</li>
+            </ul>
+            <div class="panel-foot">
+              <span class="foot-muted">Field 02 · Robotics</span>
+              <span class="foot-action">View robotics projects →</span>
+            </div>
+          </a>
+
+          <a class="panel" href="#research">
+            <div class="panel-top">
+              <span class="panel-kind">AI &amp; Computer Vision</span>
+              <span>03</span>
+            </div>
+            <p class="panel-title">Vision, machine learning &amp; LLM tooling</p>
+            <ul class="skill-chips" translate="no">
               <li>OpenCV</li>
-              <li>PCA</li>
-              <li>LLM APIs</li>
-              <li>Bedrock</li>
-              <li>ClickHouse</li>
+              <li>Computer Vision</li>
+              <li>Deep Learning</li>
+              <li>LLM APIs &amp; Prompting</li>
               <li>OpenTelemetry</li>
             </ul>
             <div class="panel-foot">
-              <span class="foot-muted">Agent systems</span>
-              <span class="foot-action">Open field</span>
+              <span class="foot-muted">Field 01 &amp; 03</span>
+              <span class="foot-action">View AI &amp; research →</span>
             </div>
           </a>
-          <a class="panel" href="#products">
+
+          <a class="panel" href="#experience">
             <div class="panel-top">
-              <span class="panel-kind">Software systems</span>
+              <span class="panel-kind">Documentation &amp; Workflow</span>
               <span>04</span>
             </div>
-            <p class="panel-title">Products and applied ML</p>
-            <ul class="skill-chips">
-              <li>FastAPI</li>
-              <li>Express</li>
-              <li>Node.js</li>
-              <li>React</li>
-              <li>SQLite</li>
-              <li>MongoDB</li>
-              <li>MCP</li>
+            <p class="panel-title">Technical writing &amp; AI-assisted debugging</p>
+            <ul class="skill-chips" translate="no">
+              <li>LaTeX</li>
+              <li>Technical Documentation</li>
+              <li>Microsoft Office Suite</li>
+              <li>AI-Assisted Code Debugging</li>
             </ul>
             <div class="panel-foot">
-              <span class="foot-muted">Products</span>
-              <span class="foot-action">Open field</span>
-            </div>
-          </a>
-          <a class="panel" href="#hardware">
-            <div class="panel-top">
-              <span class="panel-kind">Hardware and cloud</span>
-              <span>02</span>
-            </div>
-            <p class="panel-title">MedAI Cabinet stack</p>
-            <ul class="skill-chips">
-              <li>ESP32</li>
-              <li>MQTT</li>
-              <li>AWS IoT</li>
-              <li>DynamoDB</li>
-              <li>S3</li>
-              <li>SNS</li>
-            </ul>
-            <div class="panel-foot">
-              <span class="foot-muted">Hardware</span>
-              <span class="foot-action">Open field</span>
+              <span class="foot-muted">Research &amp; Academic</span>
+              <span class="foot-action">View academic profile →</span>
             </div>
           </a>
         </div>
@@ -371,123 +879,117 @@
     </section>
 
     <section class="section" id="about">
-      <div class="wrap split">
-        <div class="prose">
-          <p class="eyebrow">About</p>
-          <h2>Learning to build the system around the model</h2>
-          <p>I study computer science in the Faculty of Computer Science and Engineering at HCMUT. The part I am going deeper on is deep learning: computer vision and language models.</p>
-          <p>A notebook that prints an accuracy is the easy part. The harder part is the boundary: the web request must not hang on a tool, a log must rebuild the conversation, and a sentence in a design must survive the original paper.</p>
-          <p>I want to collaborate on open-source AI projects. I code better with EDM on.</p>
-        </div>
-        <ol class="principles">
-          <li><strong>Draw the boundary first</strong> In Celesnity, the API, the loop, the LLM provider, and the outside world do not share one function.</li>
-          <li><strong>Check it, then keep it</strong> The HCMC flood report drops claims the 2021–2026 literature does not support.</li>
-          <li><strong>Write down what is missing</strong> Every write-up has a section for what is true. Work that is still moving also says what comes next.</li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section" id="credentials">
       <div class="wrap">
-        <header class="section-head">
-          <p class="eyebrow">Record</p>
-          <h2>Certificates and awards</h2>
-          <p class="section-lead">Left empty on purpose until there is a real document or prize.</p>
-        </header>
-        <div class="panel-grid">
-          <article class="panel is-empty" id="certificates">
-            <div class="panel-top">
-              <span class="panel-kind">Certificates</span>
-              <span>Open slot</span>
-            </div>
-            <h3>None listed yet</h3>
-            <p>A card here will name the certificate, the issuer, and the year.</p>
-            <div class="panel-foot">
-              <span class="foot-muted">Waiting for a real document</span>
-              <a href="mailto:dao.nguyenhp2311@hcmut.edu.vn?subject=Portfolio%20certificate">Send a certificate</a>
-            </div>
-          </article>
-          <article class="panel is-empty" id="awards">
-            <div class="panel-top">
-              <span class="panel-kind">Awards</span>
-              <span>Open slot</span>
-            </div>
-            <h3>None listed yet</h3>
-            <p>A card here will name the prize, the contest, and the year.</p>
-            <div class="panel-foot">
-              <span class="foot-muted">Waiting for a real prize</span>
-              <a href="mailto:dao.nguyenhp2311@hcmut.edu.vn?subject=Portfolio%20award">Send an award</a>
-            </div>
-          </article>
+        <div class="split">
+          <div class="prose">
+            <p class="eyebrow">About &amp; Contact</p>
+            <h2>Learning to build the system around the model</h2>
+            <p>I study computer science in the Faculty of Computer Science and Engineering at HCMUT. My primary focus is
+              deep learning across computer vision and language models.</p>
+            <p>A notebook that prints an accuracy score is the easy part. The harder part is the system boundary: the
+              web
+              request must not hang on a slow tool, an event log must rebuild the conversation state, and every design
+              claim must survive comparison against the literature.</p>
+            <p>I am looking to collaborate on open-source AI systems. I code best with EDM on.</p>
+          </div>
+          <ol class="principles">
+            <li><strong>Competitive gaming &amp; esports</strong> Unwinding after lab hours with tactical team matches in <em>Valorant</em> and <em>League of Legends: Wild Rift (Tốc Chiến)</em>, plus organizing campus esports tournaments like eCSE Cup.</li>
+            <li><strong>Music while coding &amp; debugging</strong> Deep-focus playlists and EDM tracks stay on loop through late-night C++, ROS 2 simulation runs, and hackathon sprints.</li>
+            <li><strong>Reading &amp; recharging</strong> Taking a break from screens with novels, manga, and light stories to reset between exam seasons and Youth Union campaigns.</li>
+          </ol>
         </div>
-      </div>
-    </section>
 
-    <section class="section" id="contact">
-      <div class="wrap">
-        <div class="contact-block">
+        <div class="contact-block" id="contact">
           <div>
-            <p class="eyebrow">Contact</p>
-            <h2>Write if a field fits</h2>
-            <p class="contact-lead">University email first. GitHub for code. LinkedIn and phone stay private until you publish them.</p>
+            <p class="eyebrow">Direct contact</p>
+            <h2>Write if a project field fits</h2>
+            <p class="contact-lead">Reach out via email first, inspect the repositories on GitHub, or connect on
+              LinkedIn.</p>
             <div class="social-row social-row-lg" aria-label="Contact links">
-              <a class="social" href="mailto:dao.nguyenhp2311@hcmut.edu.vn">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.75A1.75 1.75 0 0 1 4.75 4h14.5A1.75 1.75 0 0 1 21 5.75v12.5A1.75 1.75 0 0 1 19.25 20H4.75A1.75 1.75 0 0 1 3 18.25Zm1.75-.25a.25.25 0 0 0-.25.25v.43l7.1 4.44a.75.75 0 0 0 .8 0l7.1-4.44v-.43a.25.25 0 0 0-.25-.25Zm15 3.1-6.52 4.08a2.25 2.25 0 0 1-2.46 0L4.25 8.6v9.65c0 .138.112.25.25.25h14.5a.25.25 0 0 0 .25-.25Z"/></svg>
-                <span>Email</span>
+              <a class="social" href="mailto:giadao23112006@gmail.com">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M3 5.75A1.75 1.75 0 0 1 4.75 4h14.5A1.75 1.75 0 0 1 21 5.75v12.5A1.75 1.75 0 0 1 19.25 20H4.75A1.75 1.75 0 0 1 3 18.25Zm1.75-.25a.25.25 0 0 0-.25.25v.43l7.1 4.44a.75.75 0 0 0 .8 0l7.1-4.44v-.43a.25.25 0 0 0-.25-.25Zm15 3.1-6.52 4.08a2.25 2.25 0 0 1-2.46 0L4.25 8.6v9.65c0 .138.112.25.25.25h14.5a.25.25 0 0 0 .25-.25Z" />
+                </svg>
+                <span>Send email</span>
               </a>
               <a class="social" href="https://github.com/daonguyenhp" rel="noopener">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.477 2 2 6.486 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.093.682-.217.682-.483 0-.237-.009-.866-.013-1.7-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.467-1.11-1.467-.908-.621.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.021C22 6.486 17.523 2 12 2Z"/></svg>
-                <span>GitHub</span>
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M12 2C6.477 2 2 6.486 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.093.682-.217.682-.483 0-.237-.009-.866-.013-1.7-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.467-1.11-1.467-.908-.621.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.021C22 6.486 17.523 2 12 2Z" />
+                </svg>
+                <span>Open GitHub</span>
               </a>
-              <span class="social is-pending" title="LinkedIn not published yet">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.75 3H4.25A1.25 1.25 0 0 0 3 4.25v15.5A1.25 1.25 0 0 0 4.25 21h15.5A1.25 1.25 0 0 0 21 19.75V4.25A1.25 1.25 0 0 0 19.75 3ZM8.34 18.34H5.67V9.67h2.67Zm-1.34-9.8a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1Zm11.34 9.8h-2.67v-4.46c0-1.06-.02-2.43-1.48-2.43-1.48 0-1.71 1.16-1.71 2.35v4.54h-2.67V9.67h2.56v1.18h.04a2.8 2.8 0 0 1 2.52-1.38c2.7 0 3.2 1.78 3.2 4.09Z"/></svg>
-                <span>LinkedIn</span>
-              </span>
+              <a class="social" href="https://www.linkedin.com/in/daonguyenhp/" rel="noopener">
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M19.75 3H4.25A1.25 1.25 0 0 0 3 4.25v15.5A1.25 1.25 0 0 0 4.25 21h15.5A1.25 1.25 0 0 0 21 19.75V4.25A1.25 1.25 0 0 0 19.75 3ZM8.34 18.34H5.67V9.67h2.67Zm-1.34-9.8a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1Zm11.34 9.8h-2.67v-4.46c0-1.06-.02-2.43-1.48-2.43-1.48 0-1.71 1.16-1.71 2.35v4.54h-2.67V9.67h2.56v1.18h.04a2.8 2.8 0 0 1 2.52-1.38c2.7 0 3.2 1.78 3.2 4.09Z" />
+                </svg>
+                <span>Open LinkedIn</span>
+              </a>
             </div>
-            <a class="mail" href="mailto:dao.nguyenhp2311@hcmut.edu.vn">dao.nguyenhp2311@hcmut.edu.vn</a>
+            <a class="mail" href="mailto:giadao23112006@gmail.com">giadao23112006@gmail.com</a>
           </div>
           <dl class="contact-list">
             <div>
               <dt>
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.75A1.75 1.75 0 0 1 4.75 4h14.5A1.75 1.75 0 0 1 21 5.75v12.5A1.75 1.75 0 0 1 19.25 20H4.75A1.75 1.75 0 0 1 3 18.25Zm1.75-.25a.25.25 0 0 0-.25.25v.43l7.1 4.44a.75.75 0 0 0 .8 0l7.1-4.44v-.43a.25.25 0 0 0-.25-.25Zm15 3.1-6.52 4.08a2.25 2.25 0 0 1-2.46 0L4.25 8.6v9.65c0 .138.112.25.25.25h14.5a.25.25 0 0 0 .25-.25Z"/></svg>
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M3 5.75A1.75 1.75 0 0 1 4.75 4h14.5A1.75 1.75 0 0 1 21 5.75v12.5A1.75 1.75 0 0 1 19.25 20H4.75A1.75 1.75 0 0 1 3 18.25Zm1.75-.25a.25.25 0 0 0-.25.25v.43l7.1 4.44a.75.75 0 0 0 .8 0l7.1-4.44v-.43a.25.25 0 0 0-.25-.25Zm15 3.1-6.52 4.08a2.25 2.25 0 0 1-2.46 0L4.25 8.6v9.65c0 .138.112.25.25.25h14.5a.25.25 0 0 0 .25-.25Z" />
+                </svg>
                 Email
               </dt>
-              <dd><a href="mailto:dao.nguyenhp2311@hcmut.edu.vn">dao.nguyenhp2311@hcmut.edu.vn</a></dd>
+              <dd><a href="mailto:giadao23112006@gmail.com">giadao23112006@gmail.com</a></dd>
             </div>
             <div>
               <dt>
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.477 2 2 6.486 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.093.682-.217.682-.483 0-.237-.009-.866-.013-1.7-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.467-1.11-1.467-.908-.621.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.021C22 6.486 17.523 2 12 2Z"/></svg>
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M12 2C6.477 2 2 6.486 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.093.682-.217.682-.483 0-.237-.009-.866-.013-1.7-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.467-1.11-1.467-.908-.621.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.021C22 6.486 17.523 2 12 2Z" />
+                </svg>
                 GitHub
               </dt>
               <dd><a href="https://github.com/daonguyenhp" rel="noopener">github.com/daonguyenhp</a></dd>
             </div>
             <div>
               <dt>
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.25a7.25 7.25 0 0 0-7.25 7.25c0 4.47 5.89 10.94 6.45 11.54a1.05 1.05 0 0 0 1.6 0c.56-.6 6.45-7.07 6.45-11.54A7.25 7.25 0 0 0 12 2.25Zm0 9.75a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg>
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M12 2.25a7.25 7.25 0 0 0-7.25 7.25c0 4.47 5.89 10.94 6.45 11.54a1.05 1.05 0 0 0 1.6 0c.56-.6 6.45-7.07 6.45-11.54A7.25 7.25 0 0 0 12 2.25Zm0 9.75a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
+                </svg>
                 Location
               </dt>
-              <dd>Di An, Binh Duong, Vietnam</dd>
+              <dd>Ho Chi Minh City, Viet Nam</dd>
             </div>
             <div>
               <dt>
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.75a9.25 9.25 0 1 0 0 18.5 9.25 9.25 0 0 0 0-18.5Zm.75 4a.75.75 0 0 0-1.5 0v5.19l3.3 1.9a.75.75 0 1 0 .75-1.3l-2.55-1.47Z"/></svg>
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M12 2.75a9.25 9.25 0 1 0 0 18.5 9.25 9.25 0 0 0 0-18.5Zm.75 4a.75.75 0 0 0-1.5 0v5.19l3.3 1.9a.75.75 0 1 0 .75-1.3l-2.55-1.47Z" />
+                </svg>
                 Time zone
               </dt>
               <dd>ICT (UTC+7)</dd>
             </div>
             <div>
               <dt>
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.5 3.75A1.75 1.75 0 0 0 5.75 5.5v13a1.75 1.75 0 0 0 1.75 1.75h9A1.75 1.75 0 0 0 18.25 18.5v-13A1.75 1.75 0 0 0 16.5 3.75Zm0 1.5h9a.25.25 0 0 1 .25.25v13a.25.25 0 0 1-.25.25h-9a.25.25 0 0 1-.25-.25v-13a.25.25 0 0 1 .25-.25Zm4.5 12.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"/></svg>
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M7.5 3.75A1.75 1.75 0 0 0 5.75 5.5v13a1.75 1.75 0 0 0 1.75 1.75h9A1.75 1.75 0 0 0 18.25 18.5v-13A1.75 1.75 0 0 0 16.5 3.75Zm0 1.5h9a.25.25 0 0 1 .25.25v13a.25.25 0 0 1-.25.25h-9a.25.25 0 0 1-.25-.25v-13a.25.25 0 0 1 .25-.25Zm4.5 12.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                </svg>
                 Phone
               </dt>
-              <dd class="is-pending">Not published yet</dd>
+              <dd><a href="tel:+84961534469">0961 534 469</a></dd>
             </div>
             <div>
               <dt>
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.75 3H4.25A1.25 1.25 0 0 0 3 4.25v15.5A1.25 1.25 0 0 0 4.25 21h15.5A1.25 1.25 0 0 0 21 19.75V4.25A1.25 1.25 0 0 0 19.75 3ZM8.34 18.34H5.67V9.67h2.67Zm-1.34-9.8a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1Zm11.34 9.8h-2.67v-4.46c0-1.06-.02-2.43-1.48-2.43-1.48 0-1.71 1.16-1.71 2.35v4.54h-2.67V9.67h2.56v1.18h.04a2.8 2.8 0 0 1 2.52-1.38c2.7 0 3.2 1.78 3.2 4.09Z"/></svg>
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M19.75 3H4.25A1.25 1.25 0 0 0 3 4.25v15.5A1.25 1.25 0 0 0 4.25 21h15.5A1.25 1.25 0 0 0 21 19.75V4.25A1.25 1.25 0 0 0 19.75 3ZM8.34 18.34H5.67V9.67h2.67Zm-1.34-9.8a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1Zm11.34 9.8h-2.67v-4.46c0-1.06-.02-2.43-1.48-2.43-1.48 0-1.71 1.16-1.71 2.35v4.54h-2.67V9.67h2.56v1.18h.04a2.8 2.8 0 0 1 2.52-1.38c2.7 0 3.2 1.78 3.2 4.09Z" />
+                </svg>
                 LinkedIn
               </dt>
-              <dd class="is-pending">Not published yet</dd>
+              <dd><a href="https://www.linkedin.com/in/daonguyenhp/" rel="noopener">linkedin.com/in/daonguyenhp</a></dd>
             </div>
           </dl>
         </div>
@@ -497,10 +999,169 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>© 2026 Dao Nguyen Dang Gia</span>
+      <span>© 2026 Nguyen Dang Gia Dao</span>
       <span>A number appears only when it was measured.</span>
     </div>
   </footer>
+
+  <dialog class="awards-dialog" id="awards-dialog" aria-labelledby="awards-dialog-title">
+    <div class="awards-dialog-inner">
+      <div class="proof-dialog-head">
+        <div>
+          <p class="eyebrow">Additional records</p>
+          <h3 id="awards-dialog-title">Other achievements, competitions &amp; certificates</h3>
+        </div>
+        <button type="button" class="button-secondary proof-dialog-close" data-awards-modal-close>Close archive</button>
+      </div>
+
+      <div class="awards-dialog-body">
+        <article class="award-compact" id="other-rector-2025">
+          <div class="award-main">
+            <div class="panel-top">
+              <span class="panel-kind">★ Giấy khen của Hiệu trưởng</span>
+              <span>Năm học 2024–2025</span>
+            </div>
+            <h3>Sinh viên xuất sắc toàn diện năm học 2024 – 2025</h3>
+            <p class="award-meta">Giấy khen của Hiệu trưởng Trường Đại học Bách khoa – ĐHQG-HCM vì đạt danh hiệu Sinh
+              viên xuất sắc toàn diện năm học 2024 – 2025.</p>
+          </div>
+          <div class="award-thumbs">
+            <button type="button" class="proof-thumb" data-proof-open
+              data-proof-tag="Certificate / Giấy khen Hiệu trưởng"
+              data-proof-title="Sinh viên xuất sắc toàn diện năm học 2024 – 2025"
+              data-proof-src="images/awards/other-sv-xuat-sac-2025.jpg"
+              data-proof-caption="Giấy khen của Hiệu trưởng trường vì đạt danh hiệu Sinh viên xuất sắc toàn diện năm học 2024 – 2025.">
+              <span class="proof-thumb-box">
+                <img src="images/awards/other-sv-xuat-sac-2025.jpg"
+                  alt="Giấy khen Sinh viên xuất sắc toàn diện 2024 – 2025" width="240" height="150" loading="lazy">
+              </span>
+              <span class="proof-thumb-label">Certificate ↗</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="award-compact" id="other-cse-2025">
+          <div class="award-main">
+            <div class="panel-top">
+              <span class="panel-kind">★ Danh hiệu cấp Khoa</span>
+              <span>Năm học 2024–2025</span>
+            </div>
+            <h3>“Sinh viên tiêu biểu” Khoa Khoa học và Kỹ thuật Máy tính</h3>
+            <p class="award-meta">Đạt danh hiệu “Sinh viên tiêu biểu” khoa Khoa học và Kỹ thuật Máy tính (CSE · HCMUT)
+              năm học 2024 – 2025.</p>
+          </div>
+          <div class="award-thumbs">
+            <button type="button" class="proof-thumb" data-proof-open
+              data-proof-tag="Certificate / Sinh viên tiêu biểu CSE"
+              data-proof-title="Sinh viên tiêu biểu Khoa KH&amp;KT Máy tính 2024 – 2025"
+              data-proof-src="images/awards/other-sv-tieu-bieu-cse-2025.jpg"
+              data-proof-caption="Chứng nhận đạt danh hiệu Sinh viên tiêu biểu khoa Khoa học và Kỹ thuật Máy tính năm học 2024 – 2025.">
+              <span class="proof-thumb-box">
+                <img src="images/awards/other-sv-tieu-bieu-cse-2025.jpg"
+                  alt="Sinh viên tiêu biểu Khoa KH&amp;KT Máy tính 2024 – 2025" width="240" height="150" loading="lazy">
+              </span>
+              <span class="proof-thumb-label">Certificate ↗</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="award-compact" id="other-youth-2026">
+          <div class="award-main">
+            <div class="panel-top">
+              <span class="panel-kind">★ Danh hiệu Thanh niên</span>
+              <span>2026</span>
+            </div>
+            <h3>“Thanh niên tiên tiến làm theo lời Bác” năm 2026</h3>
+            <p class="award-meta">Đạt danh hiệu “Thanh niên tiên tiến làm theo lời Bác” năm 2026.</p>
+          </div>
+          <div class="award-thumbs">
+            <button type="button" class="proof-thumb" data-proof-open
+              data-proof-tag="Certificate / Thanh niên tiên tiến 2026"
+              data-proof-title="Thanh niên tiên tiến làm theo lời Bác năm 2026"
+              data-proof-src="images/awards/other-thanh-nien-tien-tien-2026.jpg"
+              data-proof-caption="Chứng nhận đạt danh hiệu Thanh niên tiên tiến làm theo lời Bác năm 2026.">
+              <span class="proof-thumb-box">
+                <img src="images/awards/other-thanh-nien-tien-tien-2026.jpg"
+                  alt="Thanh niên tiên tiến làm theo lời Bác năm 2026" width="240" height="150" loading="lazy">
+              </span>
+              <span class="proof-thumb-label">Certificate ↗</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="award-compact" id="other-hcmc-writing">
+          <div class="award-main">
+            <div class="panel-top">
+              <span class="panel-kind">★ Giải Ba (Third Prize)</span>
+              <span>Cuộc thi viết</span>
+            </div>
+            <h3>Giải Ba cuộc thi viết “Thành phố Hồ Chí Minh – Thành phố tôi yêu”</h3>
+            <p class="award-meta">Tác phẩm đạt giải: “Thành phố Hồ Chí Minh – Hồi ức không quên”.</p>
+          </div>
+          <div class="award-thumbs">
+            <button type="button" class="proof-thumb" data-proof-open
+              data-proof-tag="Certificate / Giải Ba cuộc thi viết"
+              data-proof-title="Giải Ba · Thành phố Hồ Chí Minh – Thành phố tôi yêu"
+              data-proof-src="images/awards/other-tphcm-thanh-pho-toi-yeu.jpg"
+              data-proof-caption="Giấy chứng nhận Giải Ba cuộc thi viết “Thành phố Hồ Chí Minh – Thành phố tôi yêu” với tác phẩm “Thành phố Hồ Chí Minh – Hồi ức không quên”.">
+              <span class="proof-thumb-box">
+                <img src="images/awards/other-tphcm-thanh-pho-toi-yeu.jpg"
+                  alt="Giải Ba Thành phố Hồ Chí Minh – Thành phố tôi yêu" width="240" height="150" loading="lazy">
+              </span>
+              <span class="proof-thumb-label">Certificate ↗</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="award-compact" id="other-next-analyst">
+          <div class="award-main">
+            <div class="panel-top">
+              <span class="panel-kind">Certificate of Participation</span>
+              <span>Season 02</span>
+            </div>
+            <h3>The Next Analyst Challenge Season 02</h3>
+            <p class="award-meta">Certificate of Participation in The Next Analyst Challenge Season 02.</p>
+          </div>
+          <div class="award-thumbs">
+            <button type="button" class="proof-thumb" data-proof-open
+              data-proof-tag="Certificate / The Next Analyst Challenge"
+              data-proof-title="Certificate of Participation · The Next Analyst Challenge Season 02"
+              data-proof-src="images/awards/other-next-analyst-s2.jpg"
+              data-proof-caption="Certificate of Participation in The Next Analyst Challenge Season 02.">
+              <span class="proof-thumb-box">
+                <img src="images/awards/other-next-analyst-s2.jpg"
+                  alt="Certificate of Participation · The Next Analyst Challenge Season 02" width="240" height="150"
+                  loading="lazy">
+              </span>
+              <span class="proof-thumb-label">Certificate ↗</span>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="proof-dialog" id="proof-dialog" aria-labelledby="proof-dialog-title">
+    <div class="proof-dialog-inner">
+      <div class="proof-dialog-head">
+        <div>
+          <p class="eyebrow" data-proof-modal-tag>Proof</p>
+          <h3 id="proof-dialog-title" data-proof-modal-title>Evidence</h3>
+        </div>
+        <button type="button" class="button-secondary proof-dialog-close" data-proof-close>Close preview</button>
+      </div>
+      <div class="proof-dialog-stage">
+        <img class="proof-dialog-img" data-proof-modal-img src="" alt="" hidden>
+        <div class="proof-dialog-placeholder" data-proof-modal-placeholder>
+          <p class="evidence-title" data-proof-modal-slot-title></p>
+          <p class="evidence-hint">Place your image file at <code data-proof-modal-path></code> to display it here.</p>
+        </div>
+      </div>
+      <p class="proof-dialog-caption" data-proof-modal-caption></p>
+    </div>
+  </dialog>
+
   <script src="js/site.js"></script>
 </body>
+
 </html>

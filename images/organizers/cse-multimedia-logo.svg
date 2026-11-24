@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 110" role="img" aria-label="CSE Multimedia">
+  <!-- Viewfinder corners -->
+  <g fill="none" stroke="#141413" stroke-width="2.5" stroke-linecap="square">
+    <path d="M 8 22 V 8 H 34"/>
+    <path d="M 186 8 H 212 V 22"/>
+    <path d="M 8 88 V 102 H 34"/>
+    <path d="M 186 102 H 212 V 88"/>
+  </g>
+  <!-- Cyan offset shadow for C S E -->
+  <text x="18" y="65" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="54" font-weight="800" fill="#38bdf8" letter-spacing="2">CSE</text>
+  <!-- Outline for C S E -->
+  <text x="21" y="63" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="54" font-weight="800" fill="none" stroke="#141413" stroke-width="2" letter-spacing="2">CSE</text>
+  <!-- Red REC box -->
+  <rect x="148" y="21" width="48" height="44" rx="3" fill="#f43f5e"/>
+  <rect x="150" y="19" width="48" height="44" rx="3" fill="none" stroke="#141413" stroke-width="2"/>
+  <circle cx="174" cy="34" r="8" fill="#ffffff" stroke="#141413" stroke-width="2"/>
+  <text x="174" y="56" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="1">REC</text>
+  <!-- MULTIMEDIA subtitle -->
+  <text x="110" y="92" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" font-weight="500" fill="#141413" letter-spacing="5">MULTIMEDIA</text>
+</svg>

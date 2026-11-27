@@ -137,14 +137,21 @@
 
   <dialog class="proof-dialog" id="proof-dialog" aria-labelledby="proof-dialog-title">
     <div class="proof-dialog-inner">
-      <header class="proof-dialog-bar">
-        <h2 class="proof-dialog-title" id="proof-dialog-title">3D CAD model preview</h2>
-        <button type="button" class="proof-dialog-close" data-proof-close aria-label="Close preview">Close ✕</button>
-      </header>
-      <div class="proof-dialog-body">
-        <img id="proof-dialog-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          alt="">
+      <div class="proof-dialog-head">
+        <div>
+          <p class="eyebrow" data-proof-modal-tag>3D CAD &amp; UI Preview</p>
+          <h3 id="proof-dialog-title" data-proof-modal-title>Model preview</h3>
+        </div>
+        <button type="button" class="button-secondary proof-dialog-close" data-proof-close>Close preview</button>
       </div>
+      <div class="proof-dialog-stage">
+        <img class="proof-dialog-img" data-proof-modal-img src="" alt="" hidden>
+        <div class="proof-dialog-placeholder" data-proof-modal-placeholder>
+          <p class="evidence-title" data-proof-modal-slot-title></p>
+          <p class="evidence-hint">Place your image file at <code data-proof-modal-path></code> to display it here.</p>
+        </div>
+      </div>
+      <p class="proof-dialog-caption" data-proof-modal-caption></p>
     </div>
   </dialog>
 

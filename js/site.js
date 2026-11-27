@@ -405,7 +405,7 @@
     var closeBtn = proofDialog.querySelector("[data-proof-close]");
     var lastTrigger = null;
 
-    document.querySelectorAll("[data-proof-open]").forEach(function (thumb) {
+    document.querySelectorAll("[data-proof-open], [data-proof-src]").forEach(function (thumb) {
       var src = thumb.getAttribute("data-proof-src");
       var box = thumb.querySelector(".proof-thumb-box");
       if (src && box && !box.querySelector("img")) {
@@ -419,8 +419,8 @@
 
       thumb.addEventListener("click", function () {
         lastTrigger = thumb;
-        var tag = thumb.getAttribute("data-proof-tag") || "Proof";
-        var title = thumb.getAttribute("data-proof-title") || "Competition proof";
+        var tag = thumb.getAttribute("data-proof-tag") || "Diagram / Preview";
+        var title = thumb.getAttribute("data-proof-title") || "Preview";
         var caption = thumb.getAttribute("data-proof-caption") || "";
 
         if (modalTag) modalTag.textContent = tag;
@@ -428,6 +428,16 @@
         if (modalSlotTitle) modalSlotTitle.textContent = title;
         if (modalPath) modalPath.textContent = src || "";
         if (modalCaption) modalCaption.textContent = caption;
+
+        var fallbackTitle = proofDialog.querySelector("#proof-dialog-title");
+        var fallbackImg = proofDialog.querySelector("#proof-dialog-img");
+        if (fallbackTitle && !modalTitle) {
+          fallbackTitle.textContent = title;
+        }
+        if (fallbackImg && !modalImg && src) {
+          fallbackImg.src = src;
+          fallbackImg.alt = title;
+        }
 
         if (modalImg && modalPlaceholder) {
           modalImg.hidden = true;

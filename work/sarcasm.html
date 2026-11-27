@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Multimodal Sarcasm Detection on Edge Devices · Nguyen Dang Gia Dao</title>
+  <meta name="description" content="Vietnamese 4-class multimodal sarcasm detection (FastText + MobileNetV2) quantized to INT8 and deployed on ESP32-S3 using TensorFlow Lite Micro.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css?v=20261125">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="mark" href="../index.html" translate="no"><img class="mark-logo" src="../images/kemda-logo.svg" alt="KEMDA" width="38" height="38"><span class="mark-full">Nguyen Dang Gia Dao</span><span class="mark-short">KEMDA</span></a>
+      <div class="nav-wrap">
+        <button class="nav-burger" type="button" data-nav-burger aria-expanded="false" aria-controls="primary-nav">Open menu</button>
+        <nav class="nav-links" id="primary-nav" aria-label="Primary">
+          <a href="../index.html#home">Home</a>
+          <a href="../index.html#work">Projects</a>
+          <a href="../index.html#awards">Awards</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#leadership">Leadership</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../index.html#about">About &amp; Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="content">
+    <article>
+      <header class="case-hero">
+        <div class="wrap">
+          <a class="back" href="../index.html#research">← Return to projects</a>
+          <p class="kicker">03 · AI research and computer vision · HK262 NCKH</p>
+          <h1>Multimodal Sarcasm Detection on Edge Devices</h1>
+          <ul class="tags" aria-label="Tags">
+            <li class="tag">AI</li>
+            <li class="tag">Robot</li>
+            <li class="tag">Software</li>
+          </ul>
+          <p class="lede">
+            Dual-branch Vietnamese multimodal sarcasm classifier (hybrid FastText text encoder + MobileNetV2 image encoder) trained on ViMMSD, quantized to INT8, and deployed on an ESP32-S3 board with TensorFlow Lite Micro.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="https://github.com/daonguyenhp/edge-ai-sarcasm" target="_blank" rel="noopener">View source on GitHub</a>
+          </div>
+          <table class="facts">
+            <tr>
+              <th>Field</th>
+              <td><a href="../index.html#research">AI research and computer vision</a></td>
+            </tr>
+            <tr>
+              <th>Task &amp; Data</th>
+              <td>4-class multimodal sarcasm classification on ViMMSD (10,805 Vietnamese text + image posts)</td>
+            </tr>
+            <tr>
+              <th>Hardware</th>
+              <td translate="no">ESP32-S3 N16R8 (16 MB Flash, 8 MB Octal PSRAM) · ~1.39 s / sample on-device latency</td>
+            </tr>
+            <tr>
+              <th>Stack</th>
+              <td translate="no">PyTorch, Keras / TensorFlow, INT8 TFLite Micro, ESP-IDF, ESP-NN, FastText, MobileNetV2</td>
+            </tr>
+            <tr>
+              <th>Code</th>
+              <td><a href="https://github.com/daonguyenhp/edge-ai-sarcasm" target="_blank" rel="noopener">github.com/daonguyenhp/edge-ai-sarcasm</a></td>
+            </tr>
+          </table>
+        </div>
+      </header>
+
+      <section class="wrap case-visual-grid" aria-label="Architecture flowcharts and evaluation metrics">
+        <figure class="case-visual-card">
+          <div class="case-visual-head">
+            <h2 class="case-visual-title">Multimodal preprocessing</h2>
+            <span class="case-visual-badge">Pipeline · ViMMSD</span>
+          </div>
+          <button type="button" class="case-visual-frame" data-proof-open data-proof-tag="Architecture · Preprocessing" data-proof-src="../images/work/sarcasm/preprocessing_architecture.png" data-proof-title="Multimodal Data Preprocessing Architecture" data-proof-caption="Vietnamese caption cleaning (regex, teencode normalization, underthesea tokenization) synchronized with 112×112 RGB image normalization.">
+            <img src="../images/work/sarcasm/preprocessing_architecture.png" alt="Flowchart of text regex cleaning, teencode mapping, underthesea tokenization, and 112x112 image normalization." width="1200" height="460" loading="eager">
+          </button>
+          <figcaption>Click to enlarge · Synchronized Vietnamese text (teencode + Underthesea + FastText) and 112×112 RGB image dataloader.</figcaption>
+        </figure>
+
+        <figure class="case-visual-card">
+          <div class="case-visual-head">
+            <h2 class="case-visual-title">Training &amp; validation metrics</h2>
+            <span class="case-visual-badge">Acc 68.9% · Weighted F1 0.680</span>
+          </div>
+          <button type="button" class="case-visual-frame" data-proof-open data-proof-tag="Evaluation · ViMMSD Split" data-proof-src="../images/work/sarcasm/metrics_report.png" data-proof-title="Convergence, F1-Score &amp; Confusion Matrix" data-proof-caption="Recorded validation run (run_20260714_175850): Accuracy 0.689, Weighted F1 0.680, Macro F1 0.350 across 972 validation samples.">
+            <img src="../images/work/sarcasm/metrics_report.png" alt="4-panel evaluation plots showing loss convergence, macro F1 progression, label distribution, and confusion matrix." width="1200" height="900" loading="eager">
+          </button>
+          <figcaption>Click to enlarge · Loss convergence, Macro F1 curve, validation distribution, and 4-class confusion matrix.</figcaption>
+        </figure>
+
+        <figure class="case-visual-card">
+          <div class="case-visual-head">
+            <h2 class="case-visual-title">Hybrid text branch</h2>
+            <span class="case-visual-badge">FastText + Conv1D</span>
+          </div>
+          <button type="button" class="case-visual-frame" data-proof-open data-proof-tag="Model · Text Encoder" data-proof-src="../images/work/sarcasm/text_branch.png" data-proof-title="Hybrid Text Encoder Branch (128-D)" data-proof-caption="Trainable custom embedding [64, 128] concatenated with frozen FastText cc.vi.300 [64, 300], projected via Linear + Conv1D + Global MaxPool1D to a 128-D vector.">
+            <img src="../images/work/sarcasm/text_branch.png" alt="Diagram of the text branch combining trainable custom embeddings and frozen FastText cc.vi.300 embeddings into Conv1D and Global MaxPool1D." width="800" height="1100" loading="lazy">
+          </button>
+          <figcaption>Click to enlarge · Trainable custom embedding + frozen FastText <code>cc.vi.300</code> → Conv1D → 128-D representation.</figcaption>
+        </figure>
+
+        <figure class="case-visual-card">
+          <div class="case-visual-head">
+            <h2 class="case-visual-title">Visual branch</h2>
+            <span class="case-visual-badge">MobileNetV2 · 512-D</span>
+          </div>
+          <button type="button" class="case-visual-frame" data-proof-open data-proof-tag="Model · Image Encoder" data-proof-src="../images/work/sarcasm/image_branch.png" data-proof-title="MobileNetV2 Visual Feature Branch (512-D)" data-proof-caption="3×112×112 RGB tensor passed through headless MobileNetV2 and Global Average Pooling 2D to produce a 512-D visual embedding.">
+            <img src="../images/work/sarcasm/image_branch.png" alt="Diagram of the image branch using MobileNetV2 without top layers and GAP2D to output a 512-D vector." width="800" height="1100" loading="lazy">
+          </button>
+          <figcaption>Click to enlarge · 112×112 RGB input → headless MobileNetV2 → GAP2D → 512-D visual vector.</figcaption>
+        </figure>
+      </section>
+
+      <div class="wrap story">
+        <section>
+          <h2>End-to-end edge pipeline</h2>
+          <div class="case-module-grid">
+            <div class="case-module-item">
+              <h3>01 · Dual-branch fusion</h3>
+              <p>Fuses 128-D Vietnamese text features and 512-D MobileNetV2 visual features into a 4-class MLP classifier (<code>not-sarcasm</code>, <code>text-sarcasm</code>, <code>image-sarcasm</code>, <code>multi-sarcasm</code>).</p>
+            </div>
+            <div class="case-module-item">
+              <h3>02 · PyTorch ↔ Keras parity</h3>
+              <p>Transfers trained PyTorch weights to Keras with verified numerical equivalence (max absolute logit difference within <code>1e-6</code>).</p>
+            </div>
+            <div class="case-module-item">
+              <h3>03 · Post-training INT8 quantization</h3>
+              <p>Calibrates and quantizes the fused model into an ~7 MB INT8 <code>model_int8.tflite</code> binary tailored for custom 8 MB factory flash partitions.</p>
+            </div>
+            <div class="case-module-item">
+              <h3>04 · ESP32-S3 TFLite Micro execution</h3>
+              <p>Runs on-device inference on ESP32-S3 (16 MB Flash / 8 MB Octal PSRAM) with ESP-NN acceleration at ~1.39 s per multimodal sample.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <dialog class="proof-dialog" id="proof-dialog" aria-labelledby="proof-dialog-title">
+    <div class="proof-dialog-inner">
+      <div class="proof-dialog-head">
+        <div>
+          <p class="eyebrow" data-proof-modal-tag>Proof</p>
+          <h3 id="proof-dialog-title" data-proof-modal-title>Diagram preview</h3>
+        </div>
+        <button type="button" class="button-secondary proof-dialog-close" data-proof-close>Close preview</button>
+      </div>
+      <div class="proof-dialog-stage">
+        <img class="proof-dialog-img" data-proof-modal-img src="" alt="" hidden>
+        <div class="proof-dialog-placeholder" data-proof-modal-placeholder>
+          <p class="evidence-title" data-proof-modal-slot-title></p>
+          <p class="evidence-hint">Place your image file at <code data-proof-modal-path></code> to display it here.</p>
+        </div>
+      </div>
+      <p class="proof-dialog-caption" data-proof-modal-caption></p>
+    </div>
+  </dialog>
+
+  <footer class="site-footer"><div class="wrap"><span>© 2026 Nguyen Dang Gia Dao</span><a href="https://github.com/daonguyenhp/edge-ai-sarcasm" target="_blank" rel="noopener">View edge-ai-sarcasm repository</a></div></footer>
+  <script src="../js/site.js?v=20261125"></script>
+</body>
+</html>
